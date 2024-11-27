@@ -55,8 +55,7 @@
 
   /* Box */
   .box {
-    margin-left: 10px;
-    margin-right: 10px;
+    padding: 0 10px;
   }
 
   /* Feature Categories */  
