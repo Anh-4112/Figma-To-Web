@@ -16,46 +16,321 @@
     <title>Figma To Web</title>
 </head>
 <body>
-<!-- Header -->
-<header>
-    <!-- Notification -->
-    <div class="notification">
-        <!-- topbar -->
-        <div class="notification__topbar">
-            <p>Black Friday 50% Off! Limited time only:</p>
-            <p>652 days : 05 hour : 09 mins : 52 secs</p>
+    <!-- Header -->
+    <header>
+        <!-- Notification -->
+        <div class="notification">
+            <!-- topbar -->
+            <div class="notification__topbar">
+                <p>Black Friday 50% Off! Limited time only:</p>
+                <p>652 days : 05 hour : 09 mins : 52 secs</p>
+            </div>
+            <!-- button -->
+            <label class="notification__btn btn--close">X</label>
         </div>
-        <!-- button -->
-        <label class="notification__btn btn--close">X</label>
-    </div>
 
-    <!-- Top Links -->
-    <div class="topLink">
-        <!-- 1 -->
-        <div class="topLink__1">
-            <p>+222-1800-2628</p>
-            <p>blueskytechcompany@gmail.com</p>
+        <!-- Top Links -->
+        <div class="topLink">
+            <!-- 1 -->
+            <div class="topLink__1">
+                <p>+222-1800-2628</p>
+                <p>blueskytechcompany@gmail.com</p>
+            </div>
+            <!-- 2 -->
+            <div class="topLink__2">
+                <p>Sign up for 10% off your first order:</p>
+                <a href="#!">Sign Up</a>
+            </div>
+            <!-- Language -->
+            <div class="topLink__language">
+                <ul>
+                    <li>
+                        <a href="#!">Our Stores</a>
+                    </li>
+                    <li>
+                        <a href="#!">English</a>
+                    </li>
+                    <li>
+                        <a href="#!">United States (USD $)</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <!-- 2 -->
-        <div class="topLink__2">
-            <p>Sign up for 10% off your first order:</p>
-            <a href="#!">Sign Up</a>
+
+        <!-- Backgound -->
+        <div class="backgound">
+            <!-- Icon Menu -->
+            <label class="icon--mobile">
+                <img src="./assets/img/header/menu-mobile/icon-menu.svg" alt="icon-menu">
+            </label>
+            
+            <!-- Menu Mobile -->
+            <!-- <nav class="menu--mobile"></nav> -->
+
+            
+            <!-- Logo -->
+            <label class="logo">
+                <a href="\">
+                    <img src="./assets/img/header/Logo.svg" alt="Logo">
+                </a>
+            </label>
+            
+            <!-- Menu PC -->
+            <nav class="menu--pc">
+                <ul class="menu__list--pc">
+                    <li>
+                        <a href="#!">Home</a>
+                        <!-- Menu Home PC -->
+                        <ul class="home--pc">
+                            <li>
+                                <a href="#!">Main demo</a>
+                            </li>
+                            <li>
+                                <a href="#!">Skincare</a>
+                            </li>
+                            <li>
+                                <a href="#!">Simple Modern</a>
+                            </li>
+                            <li>
+                                <a href="#!">Simple Fashion</a>
+                            </li>
+                            <li>
+                                <a href="#!">Trendy Style</a>
+                            </li>
+                            <li>
+                                <a href="#!">Minimal Clothings</a>
+                            </li>
+                            <li>
+                                <a href="#!">Men's Luxury</a>
+                            </li>
+                            <li>
+                                <a href="#!">Clothing Store</a>
+                            </li>
+                            <li>
+                                <a href="#!">Categories Men’s</a>
+                            </li>
+                            <li>
+                                <a href="#!">Unique Watches</a>
+                            </li>
+                            <li>
+                                <a href="#!">Underwear</a>
+                            </li>
+                            <li>
+                                <a href="#!">RTL Demo</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#!">Shop</a>
+                        <!-- Menu Shop PC -->
+                        <div class="shop--pc">
+                            <div class="shop__list">
+                                <!-- Layouts -->
+                                <div class="shop__layouts">
+                                    <p>Shop Layouts</p>
+                                    <ul>
+                                        <li>
+                                           <a href="#!">Filter Left Sidebar</a>
+                                        </li>
+                                        <li>
+                                           <a href="#!">Filter Right Sidebar</a>
+                                        </li>
+                                        <li>
+                                           <a href="#!">Filter Dropdown</a>
+                                        </li>
+                                        <li>
+                                           <a href="#!">Canvas Sidebar</a>
+                                        </li>
+                                        <li>
+                                           <a href="#!">Full Width</a>
+                                        </li>
+                                        <li>
+                                           <a href="#!">List View</a>
+                                        </li>
+                                        <li>
+                                           <a href="#!">Grid 2 Columns</a>
+                                        </li>
+                                        <li>
+                                           <a href="#!">Grid 3 Columns</a>
+                                        </li>
+                                        <li>
+                                           <a href="#!">Grid 4 Columns</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Page -->
+                                <div class="shop__page">
+                                    <p>Shop Pages</p>
+                                    <ul>
+                                        <li>
+                                           <a href="#!">Collection List v1</a>
+                                        </li>
+                                        <li>
+                                           <a href="#!">Collection List v2</a>
+                                        </li>
+                                        <li>
+                                           <a href="#!">Load More Button</a>                          
+                                        </li>
+                                        <li>
+                                           <a href="#!">Infinite Scrolling</a>
+                                        </li>
+                                        <li>
+                                           <a href="#!">Panigation Page</a>                         
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Collection -->
+                                <div class="shop__collection">
+                                    <!-- 1 -->
+                                    <div class="shop__collection-1">
+                                        <img src="./assets/img/header/menu-pc/menu-shop-1.svg" alt="menu-shop-1">
+                                        <button class="shop__collection-btn btn--white">Blazers</button>
+                                    </div>
+
+                                    <!-- 2 -->
+                                    <div class="shop__collection-2">
+                                        <img src="./assets/img/header/menu-pc/menu-shop-2.svg" alt="menu-shop-2">
+                                        <button class="shop__collection-btn btn--white">Handbag</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#!">Product</a>
+                    </li>
+                    <li>
+                        <a href="#!">Page</a>
+                    </li>
+                    <li>
+                        <a href="#!">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#!">Sale</a>
+                    </li>
+                    <li>
+                        <a href="#!">Buy umino!</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <!-- Icon -->
+            <div class="icon">
+                <!-- Search -->
+                <div class="icon__search">
+                    <label></label>
+                    <img src="./assets/img/header/icon/search/Search.svg" alt="Search">
+                </div>
+
+                <!-- Login -->
+                <div class="icon__login">
+                    <label>
+                        <img src="./assets/img/header/icon/login/Login.svg" alt="Login">
+                    </label>
+                </div>
+
+                <!-- Recently Viewed -->
+                <div class="icon__recentlyViewed">
+                    <label>
+                        <img src="./assets/img/header/icon/recently viewed/Recently viewed.svg" alt="Recently viewed">
+                    </label>
+                </div>
+
+                <!-- Wishlist -->
+                <div class="icon__wishlist">
+                    <label>
+                        <img src="./assets/img/header/icon/wishlist/Wishlist.svg" alt="Wishlist">
+                    </label>
+                </div>
+
+                <!-- Cart -->
+                <div class="icon__cart">
+                    <!-- Button Cart -->
+                    <label class="icon__cart-btn" for="checkCart">
+                        <img src="./assets/img/header/icon/cart/Cart.svg" alt="Cart">
+                    </label>
+
+                    <input class="checkCart" id="checkCart" type="checkbox" hidden>
+                    <label class="overlay" for="checkCart"></label>
+
+                    <!-- Minicart -->
+                    <div class="minicart">
+                        
+                        <div class="minicart__title">
+                        <h1>Shopping Cart</h1>
+                        <label class="minicart__title-btn btn--close" for="checkCart">X</label>
+                        </div>
+
+                        <div class="minicart__cart"></div>
+
+                        <div class="minicart__icon">
+                            <img src="./assets/img/header/icon/cart/note.svg" alt="note">
+                            <img src="./assets/img/header/icon/cart/gift.svg" alt="gift">
+                            <img src="./assets/img/header/icon/cart/shipping.svg" alt="shipping">
+                        </div>
+
+                        <div class="minicart__subtotal">
+                            <h1>Subtotal:</h1>
+                        </div>
+
+                        <div class="minicart__tick">
+                            <input type="checkbox">
+                            <p>I agree with the</p>
+                            <a href="#!">terms and conditions</a>
+                        </div>
+
+                        <button class="minicart__btn btn--white">View Cart</button>
+                        <button class="minicart__btn btn--black">Checkout</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- Language -->
-        <div class="topLink__language">
-            <ul>
-                <li>
-                    <a href="#!">Our Stores</a>
-                </li>
-                <li>
-                    <a href="#!">English</a>
-                </li>
-                <li>
-                    <a href="#!">United States (USD $)</a>
-                </li>
-            </ul>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <div class="slider">
+            <!-- List Imgs -->
+            <div class="slider__imgs">
+              <picture class="slider__img">
+                <source media="(max-width:600px)" srcset="./assets/img/main/slider/slider-mobile-1.jpg" width="600px" height="550px">
+                <img src="./assets/img/main/slider/slider-pc-1.jpg" alt="slider1" width="1920px" height="810px">
+              </picture>
+        
+              <picture class="slider__img">
+                <source media="(max-width:600px)" srcset="./assets/img/main/slider/slider-mobile-2.jpg" width="600x" height="550px">
+                <img src="./assets/img/main/slider/slider-pc-2.jpg" alt="slider2" width="1920px" height="810px">
+              </picture>
+        
+              <picture class="slider__img">
+                <source media="(max-width:600px)" srcset="./assets/img/main/slider/slider-mobile-3.jpg" width="600x" height="550px">
+                <img src="./assets/img/main/slider/slider-pc-3.jpg" alt="slider3" width="1920px" height="810px">
+              </picture>
+            </div>
+        
+            <!-- Button Prev Next -->
+            <a class="slider__btn btn--prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="slider__btn btn--next" onclick="plusSlides(1)">&#10095;</a>
+        
+            <!-- Dots -->
+            <div class="slider__dots">
+              <div class="slider__dot" onclick="currentSlide(1)"></div>
+              <div class="slider__dot" onclick="currentSlide(2)"></div>
+              <div class="slider__dot" onclick="currentSlide(3)"></div>
+            </div>
+
+            <!-- Text -->
+            <div class="slider__text">
+                <h1>Stylish</h1>
+                <h1>Top Trending</h1>
+                <p>So soft you don't want to take it off.</p>
+                <button class="slider__text-btn btn--black">EXPLORE NOW</button>
+            </div>
         </div>
-    </div>
-</header>
+    </main>
+
+    <script src="./js/main.js"></script>
 </body>
 </html>

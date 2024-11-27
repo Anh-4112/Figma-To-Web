@@ -1,0 +1,55 @@
+@media (min-width:1024px) {
+  /* Menu */
+  .icon--mobile {               
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+  }
+
+}
+
+@media (max-width:1023px) {
+  /* Menu */
+  .notification,
+  .topLink,
+  .menu--pc,
+  .icon__login,
+  .icon__recentlyViewed,
+  .icon__wishlist {
+    position: fixed;
+    top: 0;
+    transform: translateY(-150%);
+  }
+  
+  .icon {
+    width: 60px;
+  }
+
+  /* Slider */
+  .slider__btn {
+    display: none;
+  }
+  
+  .slider__text {
+    justify-items: start;
+    left: 8%;
+  }
+
+  .slider__text h1 {
+    font-size: 40px;
+  }
+
+  .slider__text p {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+
+  .slider__text-btn {
+    font-weight: 600;
+    font-size: 12px;
+    padding: 10px;
+    width: 180px;
+    height: 50px;
+  }
+}
