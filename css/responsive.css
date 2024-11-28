@@ -60,6 +60,10 @@
   }
 
   /* Feature Categories */  
+  .feature__title h1 {
+    font-size: 36px;
+  }
+  
   .categories__btn {
     width: 120px;
     height: 40px;
