@@ -415,7 +415,7 @@ a{
     height: 55px;
 }
 
-/* ===Box=== */
+/* ===Feature Categories,Trending This Week, New Arrivals, People Like=== */
 .box {
     margin-top: 100px;
     width: 1410px;
@@ -492,19 +492,47 @@ a{
     padding: 12px;
 }
 
-/* ===Trending This Week=== */
-.trending__title {
+/* ===Trending This Week, New Arrivals, People Like=== */
+.box__title {
     justify-items: center;
     text-align: center;
+    margin-bottom: 40px;
 }
 
-.trending__title h1 {
+.box__title h1 {
     font-size: 45px;
     font-weight: 400;
 }
 
-.trending__text {
-    margin: 40px 0;
+.box__title p {
+    font-weight: 400;
+    color: #555555;
+    margin-top: 25px;
+}
+
+/* ===Trending This Week, New Arrivals=== */
+.box__products {
+    margin-top: 40px;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0 30px;
+}
+
+.box__products img {
+    max-width: 100%;
+    height: auto;
+}
+
+.box__product-txt {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0;
+}
+
+/* ===Trending This Week=== */
+.trending__title p {
+    display: none;
 }
 
 .trending__text>ul {
@@ -520,20 +548,79 @@ a{
     font-weight: 500;
 }
 
-.trending__products {
+/* ===Baner=== */
+.banner {
     display: grid;
     grid-auto-flow: column;
+    width: 1860px;
+    max-width: 100%;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
     gap: 0 30px;
 }
 
-.trending__products img {
+.banner img {
     max-width: 100%;
     height: auto;
 }
 
-.trending__product-txt {
-    margin-top: 16px;
+.banner__1,
+.banner__2,
+.banner__3 {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+
+.banner__txt {
+    position: absolute;
+    left: 8%;
+    bottom: 6%;
+}
+
+.banner__txt p {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.banner__txt h1 {
+    font-size: 36px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.banner__txt a {
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* ===People Like=== */
+.people__txt {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0 30px;
+    overflow: hidden;
+}
+
+.people__txt-box {
+    width: 450px;
+    max-width: 100%;
+    padding: 40px;
     display: flex;
     flex-direction: column;
-    gap: 8px 0;
+    align-items: center;
+    gap: 20px 0;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #EBEBEB;
+}
+
+.people__txt-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px 0;
 }

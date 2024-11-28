@@ -11,12 +11,6 @@
   .mobile__btn {
     display: none;
   }
-
-  /* Trending This Week */
-  .trending__title p {
-    display: none;
-  }
-
 }
 
 @media (max-width:1023px) {
@@ -63,18 +57,10 @@
     height: 50px;
   }
 
-  /* Box */
+  /* Feature Categories,Trending This Week, New Arrivals, People Like */
   .box {
     margin-top: 60px;
     padding: 0 10px;
-  }
-
-  /* Mobile Button */
-  .mobile__btn {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    gap: 0 30px;
   }
 
   /* Feature Categories */  
@@ -106,35 +92,82 @@
     grid-column: 2;
   }
 
-  /* Trending This Week */
-  .trending__title h1 {
-    font-size: 36px;
+  /* Trending This Week, New Arrivals, People Like */
+  .mobile__btn {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 0 20px;
   }
 
-  .trending__title p {
+  .mobile__btn--prev,
+  .mobile__btn--next {
+    padding: 15px;
+    font-size: 16px;
     font-weight: 400;
-    color: #555555;
+    border-radius: 50%;
   }
 
-  .trending__title p {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 20px;
+  .box__title {
+    margin-bottom: 0;
   }
   
-  .trending__text {
-    display: none;
+  .box__title h1 {
+    font-size: 36px;
   }
-
-  .trending__products {
+  
+  /* Trending This Week, New Arrivals */
+  .box__products {
+    margin-top: 0;
     grid-auto-columns: calc(100%/3);
     overflow: hidden;
   }
+
+  /* Trending This Week */
+  .trending__text {
+    display: none;
+  }
+  
+  .trending__title p {
+    display: block;
+  }
+  
+  /* Banner */
+  .banner {
+    grid-auto-columns: calc(100%/2.5);
+    overflow: hidden;
+  }
+  
+  .banner__txt h1 {
+    font-size: 30px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  /* People Like */
+  .people__txt {
+    grid-auto-columns: calc(100%/2);
+    overflow: hidden;
+  }
+
 }
 
 @media (max-width:767px) {
-  .trending__products {
+  /* Trending */
+  .box__products {
     grid-auto-columns: calc(100%/2);
+    overflow: hidden;
+  }
+
+  /* Banner */
+  .banner {
+    grid-auto-columns: calc(100%/1.5);
+    overflow: hidden;
+  }
+
+  /* People Like */
+  .people__txt {
+    grid-auto-columns: calc(100%/1);
     overflow: hidden;
   }
 }
