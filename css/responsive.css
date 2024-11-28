@@ -7,6 +7,16 @@
       transform: translateX(-100%);
   }
 
+  /* Mobile Button */
+  .mobile__btn {
+    display: none;
+  }
+
+  /* Trending This Week */
+  .trending__title p {
+    display: none;
+  }
+
 }
 
 @media (max-width:1023px) {
@@ -59,6 +69,14 @@
     padding: 0 10px;
   }
 
+  /* Mobile Button */
+  .mobile__btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 0 30px;
+  }
+
   /* Feature Categories */  
   .feature__title h1 {
     font-size: 36px;
@@ -86,5 +104,37 @@
     
   .feature__categories-sneaker {
     grid-column: 2;
+  }
+
+  /* Trending This Week */
+  .trending__title h1 {
+    font-size: 36px;
+  }
+
+  .trending__title p {
+    font-weight: 400;
+    color: #555555;
+  }
+
+  .trending__title p {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .trending__text {
+    display: none;
+  }
+
+  .trending__products {
+    grid-auto-columns: calc(100%/3);
+    overflow: hidden;
+  }
+}
+
+@media (max-width:767px) {
+  .trending__products {
+    grid-auto-columns: calc(100%/2);
+    overflow: hidden;
   }
 }
