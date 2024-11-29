@@ -164,6 +164,11 @@
     margin-top: 25px;
   }
 
+  .ig__img>img {
+    width: 192px;
+    height: 192px;
+  }
+
 }
 
 @media (max-width:767px) {
