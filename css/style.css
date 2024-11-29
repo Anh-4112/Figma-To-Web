@@ -666,3 +666,79 @@ a{
     top: 10px;
     right: 10px;
 }
+
+/* ======FOOTER====== */
+.container {
+    margin-top: 60px;
+    width: 1410px;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    justify-content: space-between;
+}
+
+.container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer__about,
+.footer__newsletter {
+    grid-row: 2/6;
+}
+
+.footer__categories,
+.footer__service {
+    grid-row: 1/6;
+}
+
+/* About */
+.footer__about {
+    width: 340px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px 0;
+}
+
+/* About, Newsletter */
+.footer__about>p,
+.footer__newsletter>p {
+    line-height: 23.12px;
+    color: #555555;
+}
+
+/* Categories, Service, Newsletter */
+.footer__categories>h1,
+.footer__service>h1,
+.footer__newsletter>h1 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+/* Categories, Service */
+.footer__categories a,
+.footer__service a {
+    display: block;
+    color: #555555;
+    line-height: 25px;
+}
+
+/* Newsletter */
+.footer__newsletter {
+    width: 450px;
+    max-width: 100%;
+}
+
+.footer__newsletter-input {
+    margin-top: 25px;
+}
+
+.footer__newsletter-btn {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 16.5px 42.5px;
+}
