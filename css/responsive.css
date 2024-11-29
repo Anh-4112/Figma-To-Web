@@ -57,7 +57,7 @@
     height: 50px;
   }
 
-  /* Feature Categories,Trending This Week, New Arrivals, People Like */
+  /* Feature Categories,Trending This Week, New Arrivals, People Like, Instagram */
   .box {
     margin-top: 60px;
     padding: 0 10px;
@@ -92,6 +92,19 @@
     grid-column: 2;
   }
 
+  /* Trending This Week, New Arrivals, People Like, Instagram */
+  .box__title {
+    margin-bottom: 0;
+  }
+  
+  .box__title h1 {
+    font-size: 36px;
+  }
+
+  .box__title p {
+    margin-top: 15px;
+  }
+  
   /* Trending This Week, New Arrivals, People Like */
   .mobile__btn {
     display: flex;
@@ -106,14 +119,6 @@
     font-size: 16px;
     font-weight: 400;
     border-radius: 50%;
-  }
-
-  .box__title {
-    margin-bottom: 0;
-  }
-  
-  .box__title h1 {
-    font-size: 36px;
   }
   
   /* Trending This Week, New Arrivals */
@@ -150,6 +155,15 @@
     overflow: hidden;
   }
 
+  .people__btn {
+    display: none;
+  }
+
+  /* Instagram */
+  .ig__list {
+    margin-top: 25px;
+  }
+
 }
 
 @media (max-width:767px) {
@@ -170,4 +184,5 @@
     grid-auto-columns: calc(100%/1);
     overflow: hidden;
   }
+
 }

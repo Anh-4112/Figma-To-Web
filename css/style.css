@@ -415,7 +415,7 @@ a{
     height: 55px;
 }
 
-/* ===Feature Categories,Trending This Week, New Arrivals, People Like=== */
+/* ===Feature Categories,Trending This Week, New Arrivals, People Like, Instagram=== */
 .box {
     margin-top: 100px;
     width: 1410px;
@@ -492,7 +492,7 @@ a{
     padding: 12px;
 }
 
-/* ===Trending This Week, New Arrivals, People Like=== */
+/* ===Trending This Week, New Arrivals, People Like, Instagram=== */
 .box__title {
     justify-items: center;
     text-align: center;
@@ -603,6 +603,25 @@ a{
     grid-auto-flow: column;
     gap: 0 30px;
     overflow: hidden;
+    position: relative;
+}
+
+.people__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid #EBEBEB
+}
+
+.people--prev {
+    left: 20px;
+}
+
+.people--next {
+    right: 20px;
 }
 
 .people__txt-box {
@@ -618,9 +637,34 @@ a{
     border: 1px solid #EBEBEB;
 }
 
+.people__txt-box>p {
+    line-height: 24px;
+}
+
 .people__txt-name {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px 0;
+}
+
+/* ===Instagram=== */
+.ig__list {
+    /* display: grid;
+    grid-auto-flow: column; */
+    display: flex;
+    gap: 0 5px;
+    overflow: hidden;
+}
+
+.ig__img {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+
+.ig__icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
