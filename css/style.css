@@ -677,7 +677,7 @@ a{
     margin-right: auto;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 2fr;
-    justify-content: space-between;
+    grid-gap: 0 30px;
 }
 
 .container img {
@@ -687,7 +687,6 @@ a{
 
 /* About */
 .footer__about {
-    width: 340px;
     display: flex;
     flex-direction: column;
     gap: 25px 0;
