@@ -685,20 +685,8 @@ a{
     height: auto;
 }
 
-/* .footer__about,
-.footer__newsletter {
-    grid-row: 2/6;
-}
-
-.footer__categories,
-.footer__service {
-    grid-row: 1/6;
-} */
-
 /* About */
 .footer__about {
-    width: 340px;
-    max-width: 100%;
     display: flex;
     flex-direction: column;
     gap: 25px 0;
