@@ -676,6 +676,7 @@ a{
     margin-left: auto;
     margin-right: auto;
     display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
     justify-content: space-between;
 }
 
@@ -684,7 +685,7 @@ a{
     height: auto;
 }
 
-.footer__about,
+/* .footer__about,
 .footer__newsletter {
     grid-row: 2/6;
 }
@@ -692,7 +693,7 @@ a{
 .footer__categories,
 .footer__service {
     grid-row: 1/6;
-}
+} */
 
 /* About */
 .footer__about {
@@ -728,13 +729,15 @@ a{
 }
 
 /* Newsletter */
-.footer__newsletter {
-    width: 450px;
-    max-width: 100%;
-}
-
 .footer__newsletter-input {
     margin-top: 25px;
+    display: flex;
+}
+
+.footer__newsletter-input input {
+    flex: 1;
+    border-radius: 25px;
+    border: 1px solid #EBEBEB
 }
 
 .footer__newsletter-btn {
@@ -742,3 +745,6 @@ a{
     font-weight: 600;
     padding: 16.5px 42.5px;
 }
+
+
+

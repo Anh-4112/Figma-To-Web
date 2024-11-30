@@ -1,3 +1,30 @@
+@media (max-width:1099px) {
+  .container {
+    justify-content: space-evenly;
+    grid-gap: 30px;
+}
+
+  .footer__about {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .footer__newsletter {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .footer__categories {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  
+  .footer__service {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
 @media (min-width:1024px) {
   /* Menu */
   .icon--mobile {               
@@ -171,13 +198,17 @@
 
   /* footer */
   .container {
-    justify-content: center;
+    grid-template-columns: 1fr;
     grid-gap: 30px;
   }
 
   .footer__about {
     grid-column: 1;
     grid-row: 1;
+  }
+
+  .footer__about-followShop {
+    display: none;
   }
 
   .footer__newsletter {
