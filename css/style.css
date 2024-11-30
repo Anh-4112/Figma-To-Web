@@ -687,6 +687,7 @@ a{
 
 /* About */
 .footer__about {
+    width: 340px;
     display: flex;
     flex-direction: column;
     gap: 25px 0;
