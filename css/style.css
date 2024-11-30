@@ -714,7 +714,7 @@ a{
 .footer__service a {
     display: block;
     color: #555555;
-    line-height: 25px;
+    line-height: 30px;
 }
 
 /* Newsletter */
@@ -734,6 +734,3 @@ a{
     font-weight: 600;
     padding: 16.5px 42.5px;
 }
-
-
-
