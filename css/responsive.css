@@ -11,6 +11,11 @@
   .mobile__btn {
     display: none;
   }
+
+  /*  */
+  .tabBar--mobile {
+    display: none;
+  }
 }
 
 @media (max-width:1023px) {
@@ -170,6 +175,7 @@
   }
 
   /* footer */
+  /* Container */
   .container {
     grid-template-columns: 1fr;
     grid-gap: 30px;
@@ -200,14 +206,6 @@
     grid-column: 1;
     grid-row: 4;
   }
-  
-  /* .footer__about,
-  .footer__newsletter,
-  .footer__categories,
-  .footer__service {
-    padding: 0 10px;
-    box-sizing: border-box;
-  } */
 
   .footer__newsletter,
   .footer__categories,
@@ -226,6 +224,51 @@
   .footer__newsletter-btn {
     padding: 20px 30px;
   }
+
+  /* Copyright */
+  .copyright {
+    margin-top: 30px;
+    flex-direction: column;
+    padding: 30px 0;
+    align-items: center;
+    gap: 15px 0;
+  }
+
+  .tabBar--mobile {
+    width: 430px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    position: relative;
+  }
+
+  .tabBar--mobile>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tabBar--mobile>div>p {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  /* .tabBar__backToTop,
+  .tabBar__chat {
+    position: absolute;
+    right: 10px;
+  }
+
+  .tabBar__backToTop {
+    bottom: 155px;
+  }
+
+  .tabBar__chat {
+    bottom: 85px;
+  } */
 }
 
 @media (max-width:767px) {
