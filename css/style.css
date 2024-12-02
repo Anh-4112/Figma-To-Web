@@ -108,7 +108,7 @@ a{
     justify-content: space-between;
     padding: 20px 30px;
     align-items: center;
-
+    border-top: 1px solid #EBEBEB;
 }
 
 /* menu-pc */
