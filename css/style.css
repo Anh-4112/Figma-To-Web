@@ -450,7 +450,7 @@ a{
     margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
     justify-items: center;
     grid-gap: 30px;
 }

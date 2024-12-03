@@ -81,8 +81,8 @@
 
   .feature__categories {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr 1fr 1fr;
-}
+    grid-template-rows: auto auto auto;
+  }
   
   .feature__categories-clothing {
     grid-column: 1;
