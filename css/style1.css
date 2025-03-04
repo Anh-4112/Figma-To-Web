@@ -9,6 +9,10 @@ a{
     color: var(--black);
 }
 
+.text-hover-gray:hover {
+    color: var(--gray);
+}
+
 .btn {
     cursor: pointer;
     display: inline-block;
@@ -28,26 +32,50 @@ a{
     background-color: var(--white);
 }
 
-/* .btn-sm {
-    padding: 1.2rem 5rem;
-    font-size: 1.6rem;
-    font-weight: 600;
-    line-height: 2.312rem;
-    border-radius: 3.5rem;
-} */
+.btn-color {
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    border: 0.1rem solid var(--gray);
+}
+
+.btn-color:hover {
+    border: 0.1rem solid var(--black);
+}
 
 /*=== Zoom =================*/
 .overflow-hidden {
     overflow: hidden;
 }
 
-.zoom {
-    transition: transform 1s ease-out;
+.img-zoom {
+    transition: transform 1s ease-in-out;
 }
 
-.zoom:hover>img {
+.img-hidden {
+    transition: opacity 0.5s ease-in;
+}
+
+.img-change {
+    z-index: 10;
+    opacity: 0;
+    transition: opacity, transform, 1s ease-in-out;
+}
+
+.wrapper-zoom:hover .img-zoom {
     transform: scale(1.1);
-    transition: transform 1s ease-out;
+}
+.btn-zoom:hover .img-zoom {
+    transform: scale(1.1);
+}
+
+.wrapper-hidden:hover .img-hidden {
+    opacity: 0;
+}
+
+.wrapper-change:hover .img-change {
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 /*=== Pseudo Color =================*/
@@ -57,6 +85,8 @@ a{
     --red: #D0473E;
     --gray: #555555;
     --silver: #EBEBEB;
+    --beige: #DFD3C2;
+    --brown: #492919;
 }
 
 /*=== Color =================*/
@@ -95,6 +125,14 @@ a{
 
 .bg-gray {
     background-color: var(--gray);
+}
+
+.bg-beige {
+    background-color: var(--beige);
+}
+
+.bg-brown {
+    background-color: var(--brown);
 }
 
 /*=== Fontsize =================*/
@@ -167,6 +205,16 @@ a{
     line-height: 8rem;
 }
 
+/*=== Cursor =================*/
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/*=== Display None =================*/
+.d-none {
+    display: none;
+}
+
 /*=== Display Grid =================*/
 .d-grif {
     display: grid;
@@ -195,6 +243,18 @@ a{
     flex: 1 1 auto !important;
 }
 
+.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.row {
+    flex-wrap: wrap;
+}
+
+.col-auto {
+    content: "";
+}
+
 /*=== Gap =================*/
 .gap-5{
     gap: 0.3rem;
@@ -213,19 +273,23 @@ a{
 }
 
 /*=== Justify Content =================*/
-.justify-content-end{
+.justify-content-start {
+    justify-content: start;
+}
+
+.justify-content-end {
     justify-content: end;
 }
 
-.justify-content-center{
+.justify-content-center {
     justify-content: center;
 }
 
-.justify-content-between{
+.justify-content-between {
     justify-content: space-between;
 }
 
-.justify-content-around{
+.justify-content-around {
     justify-content: space-around;
 }
 
@@ -326,9 +390,9 @@ a{
     padding-right: 2.5rem;
 }
 
-.px-42{
-    padding-left: 3.8rem;
-    padding-right: 3.8rem;
+.px-35{
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
 }
 
 .px-47{
@@ -336,9 +400,19 @@ a{
     padding-right: 4.7rem;
 }
 
+.px-48{
+    padding-left: 4.8rem;
+    padding-right: 4.8rem;
+}
+
 .px-54{
     padding-left: 5.4rem;
     padding-right: 5.4rem;
+}
+
+.px-60{
+    padding-left: 6rem;
+    padding-right: 6rem;
 }
 
 /*=== Padding Y =================*/
@@ -365,8 +439,20 @@ a{
 
 
 /*=== Magin Top =================*/
+.mt-2 {
+    margin-top: 0.2rem;
+}
+
 .mt-4 {
     margin-top: 0.4rem;
+}
+
+.mt-10 {
+    margin-top: 1rem;
+}
+
+.mt-16 {
+    margin-top: 1.6rem;
 }
 
 .mt-20 {
@@ -413,12 +499,10 @@ a{
     margin-left: 3rem;
 }
 
-.ml-255 {
-    margin-left: 25.5rem;
-}
-
 /*=== Magin Bottom =================*/
-
+.mb-200 {
+    margin-bottom: 20rem;
+}
 /*=== Magin Right =================*/
 .mr-1 {
     margin-right: 0.1rem;
@@ -436,8 +520,10 @@ a{
     margin-right: 3rem;
 }
 
-.mr-255 {
-    margin-right: 25.5rem;
+/*=== Magin X =================*/
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*=== Border Side =================*/
@@ -456,6 +542,10 @@ a{
 }
 
 /*=== Rounded =================*/
+.rounded-circle-10 {
+    border-radius: 1rem;
+}
+
 .rounded-circle-35 {
     border-radius: 3.5rem;
 }
@@ -466,8 +556,8 @@ a{
 }
 
 /*=== Left =================*/
-.left-135 {
-    left: 13.5rem;
+.left-0 {
+    left: 0rem;
 }
 
 .left-145 {
@@ -558,4 +648,11 @@ a{
 .swiper-button-next:hover {
     color: var(--white) !important;
     background-color: var(--black) !important;
+}
+
+/*=== Rating =================*/
+.rate-input:checked ~ label,
+.rate-label:hover,
+.rate-label:hover ~ label {
+    color: var(--black);
 }
