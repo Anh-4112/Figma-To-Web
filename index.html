@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,425 +9,255 @@
     <!-- embel fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <!-- embel icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- styles -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- responsive -->
-    <link rel="stylesheet" href="./css/responsive.css">
     <title>Figma To Web</title>
 </head>
+
 <body>
     <!-- Header -->
     <header>
         <!-- Notification -->
-        <div class="notification">
+        <div class="bg-red d-flex justify-content-center relative pt-10 pb-10">
             <!-- topbar -->
-            <div class="notification__topbar">
+            <div class="fs-14 fw-400 color-white d-flex lh">
                 <p>Black Friday 50% Off! Limited time only:</p>
-                <p>652 days : 05 hour : 09 mins : 52 secs</p>
+                <p class="pl-5">652 days : 05 hour : 09 mins : 52 secs</p>
             </div>
             <!-- button -->
-            <label class="notification__btn btn--close">X</label>
+            <span class="fs-18 fw-400 color-white absolute right-19 bottom-8">
+                <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.5" d="M0.972656 1.52148C0.820312 1.38086 0.744141 1.21094 0.744141 1.01172C0.744141 0.800781 0.820312 0.619141 0.972656 0.466797C1.11328 0.326172 1.28906 0.255859 1.5 0.255859C1.71094 0.255859 1.88672 0.326172 2.02734 0.466797L6 4.43945L9.97266 0.466797C10.1133 0.326172 10.2891 0.255859 10.5 0.255859C10.7109 0.255859 10.8867 0.326172 11.0273 0.466797C11.1797 0.619141 11.2559 0.800781 11.2559 1.01172C11.2559 1.21094 11.1797 1.38086 11.0273 1.52148L7.05469 5.49414L11.0273 9.4668C11.1797 9.61914 11.2559 9.80078 11.2559 10.0117C11.2559 10.2109 11.1797 10.3809 11.0273 10.5215C10.8867 10.6738 10.7109 10.75 10.5 10.75C10.2891 10.75 10.1133 10.6738 9.97266 10.5215L6 6.56641L2.02734 10.5215C1.88672 10.6738 1.71094 10.75 1.5 10.75C1.28906 10.75 1.11328 10.6738 0.972656 10.5215C0.820312 10.3809 0.744141 10.2109 0.744141 10.0117C0.744141 9.80078 0.820312 9.61914 0.972656 9.4668L4.94531 5.49414L0.972656 1.52148Z"fill="white" />
+                </svg>
+            </span>
         </div>
 
         <!-- Top Links -->
-        <div class="topLink">
+        <div class="d-flex fs-14 justify-content-between lh pt-10 pb-9 ml-30 mr-30 border-bottom border-1 border-silver">
             <!-- 1 -->
-            <div class="topLink__1">
+            <div class="d-flex">
                 <p>+222-1800-2628</p>
-                <p>blueskytechcompany@gmail.com</p>
+                <p class="pl-25 pr-5">blueskytechcompany@gmail.com</p>
             </div>
             <!-- 2 -->
-            <div class="topLink__2">
-                <p>Sign up for 10% off your first order:</p>
-                <a href="#!">Sign Up</a>
+            <div class="d-flex justify-content-between">
+                <p class="">Sign up for 10% off your first order:</p>
+                <a class="text-decoration-display fw-500 pl-5" href="#!">Sign Up</a>
             </div>
             <!-- Language -->
-            <div class="topLink__language">
-                <ul>
-                    <li>
-                        <a href="#!">Our Stores</a>
-                    </li>
-                    <li>
-                        <a href="#!">
-                            English
-                            <i class="fa fa-solid fa-angle-down"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#!">
-                            United States (USD $)
-                            <i class="fa fa-solid fa-angle-down"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            <ul class="d-flex">
+                <li>
+                    <a href="#!">Our Stores</a>
+                </li>
+                <li>
+                    <a class="pl-25" href="#!">
+                        English
+                        <i class="fa fa-solid fa-angle-down pl-5 pr-2"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="pl-25 pr-2" href="#!">
+                        United States (USD $)
+                        <i class="fa fa-solid fa-angle-down pl-5" ></i>
+                    </a>
+                </li>
+            </ul>
         </div>
 
         <!-- Backgound -->
-        <div class="backgound">
-            <!-- Icon Menu -->
-            <label class="icon--mobile">
-                <img src="./assets/img/header/menu-mobile/icon-menu.svg" alt="icon-menu">
-            </label>
-            
-            <!-- Menu Mobile -->
-            <!-- <nav class="menu--mobile"></nav> -->
-
-            
+        <nav class="d-flex gap-10 ml-30 mr-30">
             <!-- Logo -->
-            <label class="logo">
+            <div class="flex-fill pt-25 pb-20 pr-100">
                 <a href="\">
                     <img src="./assets/img/header/Logo.svg" alt="Logo">
                 </a>
-            </label>
-            
-            <!-- Menu PC -->
-            <nav class="menu--pc">
-                <ul class="menu__list--pc">
+            </div>
+                
+            <!-- Navs -->
+            <div class=" pt-25 pb-20">
+                <ul class="d-flex justify-content-between fs-16 fw-500 lh">
                     <li>
-                        <a href="#!">
+                        <a class="px-15" href="">
                             Home
-                            <i class="fa fa-solid fa-angle-down"></i>
+                            <i class="fa fa-solid fa-angle-down pl-3"></i>
                         </a>
-                        <!-- Menu Home PC -->
-                        <ul class="home--pc">
-                            <li>
-                                <a href="#!">Main demo</a>
-                            </li>
-                            <li>
-                                <a href="#!">Skincare</a>
-                            </li>
-                            <li>
-                                <a href="#!">Simple Modern</a>
-                            </li>
-                            <li>
-                                <a href="#!">Simple Fashion</a>
-                            </li>
-                            <li>
-                                <a href="#!">Trendy Style</a>
-                            </li>
-                            <li>
-                                <a href="#!">Minimal Clothings</a>
-                            </li>
-                            <li>
-                                <a href="#!">Men's Luxury</a>
-                            </li>
-                            <li>
-                                <a href="#!">Clothing Store</a>
-                            </li>
-                            <li>
-                                <a href="#!">Categories Men’s</a>
-                            </li>
-                            <li>
-                                <a href="#!">Unique Watches</a>
-                            </li>
-                            <li>
-                                <a href="#!">Underwear</a>
-                            </li>
-                            <li>
-                                <a href="#!">RTL Demo</a>
-                            </li>
-                        </ul>
                     </li>
                     <li>
-                        <a href="#!">
+                        <a class="px-15" href="">
                             Shop
-                            <i class="fa fa-solid fa-angle-down"></i>
-                        </a>
-                        <!-- Menu Shop PC -->
-                        <div class="shop--pc">
-                            <div class="shop__list">
-                                <!-- Layouts -->
-                                <div class="shop__layouts">
-                                    <p>Shop Layouts</p>
-                                    <ul>
-                                        <li>
-                                           <a href="#!">Filter Left Sidebar</a>
-                                        </li>
-                                        <li>
-                                           <a href="#!">Filter Right Sidebar</a>
-                                        </li>
-                                        <li>
-                                           <a href="#!">Filter Dropdown</a>
-                                        </li>
-                                        <li>
-                                           <a href="#!">Canvas Sidebar</a>
-                                        </li>
-                                        <li>
-                                           <a href="#!">Full Width</a>
-                                        </li>
-                                        <li>
-                                           <a href="#!">List View</a>
-                                        </li>
-                                        <li>
-                                           <a href="#!">Grid 2 Columns</a>
-                                        </li>
-                                        <li>
-                                           <a href="#!">Grid 3 Columns</a>
-                                        </li>
-                                        <li>
-                                           <a href="#!">Grid 4 Columns</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <!-- Page -->
-                                <div class="shop__page">
-                                    <p>Shop Pages</p>
-                                    <ul>
-                                        <li>
-                                           <a href="#!">Collection List v1</a>
-                                        </li>
-                                        <li>
-                                           <a href="#!">Collection List v2</a>
-                                        </li>
-                                        <li>
-                                           <a href="#!">Load More Button</a>                          
-                                        </li>
-                                        <li>
-                                           <a href="#!">Infinite Scrolling</a>
-                                        </li>
-                                        <li>
-                                           <a href="#!">Panigation Page</a>                         
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <!-- Collection -->
-                                <div class="shop__collection">
-                                    <!-- 1 -->
-                                    <div class="shop__collection-1">
-                                        <img src="./assets/img/header/menu-pc/menu-shop-1.svg" alt="menu-shop-1">
-                                        <button class="shop__collection-btn btn--white">Blazers</button>
-                                    </div>
-
-                                    <!-- 2 -->
-                                    <div class="shop__collection-2">
-                                        <img src="./assets/img/header/menu-pc/menu-shop-2.svg" alt="menu-shop-2">
-                                        <button class="shop__collection-btn btn--white">Handbag</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#!">
-                            Product
-                            <i class="fa fa-solid fa-angle-down"></i>
+                            <i class="fa fa-solid fa-angle-down pl-3"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#!">
-                            Page
-                            <i class="fa fa-solid fa-angle-down"></i>
+                        <a class="px-15" href="">
+                            Products
+                            <i class="fa fa-solid fa-angle-down pl-3"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#!">
+                        <a class="px-15" href="">
+                            Pages
+                            <i class="fa fa-solid fa-angle-down pl-3"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="px-15" href="">
                             Blog
-                            <i class="fa fa-solid fa-angle-down"></i>
+                            <i class="fa fa-solid fa-angle-down pl-3"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#!">Sale</a>
+                        <a class="px-15" href="">
+                            Sale
+                        </a>
                     </li>
                     <li>
-                        <a href="#!">Buy umino!</a>
+                        <a class="px-15" href="">
+                            Buy Uminno!
+                        </a>
                     </li>
                 </ul>
-            </nav>
-            
-            <!-- Icon -->
-            <div class="icon">
-                <!-- Search -->
-                <div class="icon__search">
-                    <label></label>
-                    <img src="./assets/img/header/icon/search/Search.svg" alt="Search">
-                </div>
-
-                <!-- Login -->
-                <div class="icon__login">
-                    <label>
-                        <img src="./assets/img/header/icon/login/Login.svg" alt="Login">
-                    </label>
-                </div>
-
-                <!-- Recently Viewed -->
-                <div class="icon__recentlyViewed">
-                    <label>
-                        <img src="./assets/img/header/icon/recently viewed/Recently viewed.svg" alt="Recently viewed">
-                    </label>
-                </div>
-
-                <!-- Wishlist -->
-                <div class="icon__wishlist">
-                    <label>
-                        <img src="./assets/img/header/icon/wishlist/Wishlist.svg" alt="Wishlist">
-                    </label>
-                </div>
-
-                <!-- Cart -->
-                <div class="icon__cart">
-                    <!-- Button Cart -->
-                    <label class="icon__cart-btn" for="checkCart">
-                        <img src="./assets/img/header/icon/cart/Cart.svg" alt="Cart">
-                    </label>
-
-                    <input class="checkCart" id="checkCart" type="checkbox" hidden>
-                    <label class="overlay" for="checkCart"></label>
-
-                    <!-- Minicart -->
-                    <div class="minicart">
-                        
-                        <div class="minicart__title">
-                        <h1>Shopping Cart</h1>
-                        <label class="minicart__title-btn btn--close" for="checkCart">X</label>
-                        </div>
-
-                        <div class="minicart__cart"></div>
-
-                        <div class="minicart__icon">
-                            <img src="./assets/img/header/icon/cart/note.svg" alt="note">
-                            <img src="./assets/img/header/icon/cart/gift.svg" alt="gift">
-                            <img src="./assets/img/header/icon/cart/shipping.svg" alt="shipping">
-                        </div>
-
-                        <div class="minicart__subtotal">
-                            <h1>Subtotal:</h1>
-                        </div>
-
-                        <div class="minicart__tick">
-                            <input type="checkbox">
-                            <p>I agree with the</p>
-                            <a href="#!">terms and conditions</a>
-                        </div>
-
-                        <button class="minicart__btn btn--white">View Cart</button>
-                        <button class="minicart__btn btn--black">Checkout</button>
-                    </div>
-                </div>
             </div>
-        </div>
+                
+            <!-- Icon -->
+            <div class="flex-fill pt-20 pb-20 d-flex justify-content-end align-items-end">
+                <a href="">
+                    <img src="./assets/img/header/icon/search/Search.svg" alt="Search">
+                </a>
+                <a class="ml-20 " href="">
+                    <img src="./assets/img/header/icon/login/Login.svg" alt="Login">
+                </a>
+                <a class="ml-20 " href="">
+                    <img src="assets/img/header/icon/recently viewed/Recently viewed.svg" alt="Recently viewed">
+                </a>
+                <a class="ml-20 " href="">
+                    <img src="assets/img/header/icon/wishlist/Wishlist.svg" alt="Wishlist">
+                </a>
+                <a class="ml-9" href="">
+                    <img src="assets/img/header/icon/cart/Cart.svg" alt="Cart.svg">
+                </a>
+            </div>
+        </nav>
     </header>
 
     <!-- Main -->
     <main>
         <!-- Slider -->
-        <div class="slider">
-            <!-- List Imgs -->
-            <div class="slider__imgs">
-              <picture class="slider__img">
-                <source media="(max-width:600px)" srcset="./assets/img/main/slider/slider-mobile-1.jpg" width="600px" height="550px">
-                <img src="./assets/img/main/slider/slider-pc-1.jpg" alt="slider1" width="1920px" height="810px">
-              </picture>
-        
-              <picture class="slider__img">
-                <source media="(max-width:600px)" srcset="./assets/img/main/slider/slider-mobile-2.jpg" width="600x" height="550px">
-                <img src="./assets/img/main/slider/slider-pc-2.jpg" alt="slider2" width="1920px" height="810px">
-              </picture>
-        
-              <picture class="slider__img">
-                <source media="(max-width:600px)" srcset="./assets/img/main/slider/slider-mobile-3.jpg" width="600x" height="550px">
-                <img src="./assets/img/main/slider/slider-pc-3.jpg" alt="slider3" width="1920px" height="810px">
-              </picture>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                    <a href="">
+                        <img src="assets/img/main/slider/slider-pc-1.jpg" alt="slider-pc-1">
+                    </a>
+                    <div class="absolute top-252 left-354">
+                        <h1 class="fs-80 fw-400 lh-80">Stylish<br>Top Trending</h1>
+                        <p class="fs-16 fw-400 mt-20 mr-2">So soft you don't want to take it off.</p>
+                        <button class="btn btn-dark fs-12 fw-600 px-54 py-17 lh rounded-circle-35 mt-50 mr-1">EXPLORE NOW</button>
+                    </div>
+              </div>
+              <div class="swiper-slide relative">
+                    <a href="">
+                        <img src="assets/img/main/slider/slider-pc-2.jpg" alt="slider-pc-2">
+                    </a>
+                    <div class="absolute top-252 left-354">
+                        <h1 class="fs-80 fw-400 lh-80">Stylish<br>Top Trending</h1>
+                        <p class="fs-16 fw-400 mt-20 mr-2">So soft you don't want to take it off.</p>
+                        <button class="btn btn-dark fs-12 fw-600 px-54 py-17 lh rounded-circle-35 mt-50 mr-1">EXPLORE NOW</button>
+                    </div>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                    <img src="assets/img/main/slider/slider-pc-3.jpg" alt="slider-pc-3">
+                </a>
+                <div class="absolute top-252 left-354">
+                    <h1 class="fs-80 fw-400 lh-80">Stylish<br>Top Trending</h1>
+                    <p class="fs-16 fw-400 mt-20 mr-2">So soft you don't want to take it off.</p>
+                    <button class="btn btn-dark fs-12 fw-600 px-54 py-17 lh rounded-circle-35 mt-50 mr-1">EXPLORE NOW</button>
+                </div>
+              </div>
             </div>
-        
-            <!-- Button Prev Next -->
-            <a class="slider__btn btn--prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="slider__btn btn--next" onclick="plusSlides(1)">&#10095;</a>
-        
-            <!-- Dots -->
-            <div class="slider__dots">
-              <div class="slider__dot" onclick="currentSlide(1)"></div>
-              <div class="slider__dot" onclick="currentSlide(2)"></div>
-              <div class="slider__dot" onclick="currentSlide(3)"></div>
-            </div>
-
-            <!-- Text -->
-            <div class="slider__text">
-                <h1>Stylish</h1>
-                <h1>Top Trending</h1>
-                <p>So soft you don't want to take it off.</p>
-                <button class="slider__text-btn btn--black">EXPLORE NOW</button>
-            </div>
-        </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
 
         <!-- Feature Categories -->
-        <div class="box">
+        <div class="mt-85 ml-255 mr-255">
             <!-- Title -->
-            <div class="feature__title">
-                <h1>Featured Collections</h1>
-                <p>Elevate your style with our chic featured collection—where fashion meets flair effortlessly.</p>
+            <div class="text-center">
+                <h1 class="fs-45 fw-400 lh-65">Featured Collections</h1>
+                <p class="mt-4 fs-16 fw-400 lh color-gray">Elevate your style with our chic featured collection—where fashion meets flair effortlessly.</p>
             </div>
 
             <!-- Categories -->
-            <div class="feature__categories">
+            <div class="mt-35 d-grif grif-3-col gap-25 justify-content-center">
                 <!-- Clothing -->
-                <div class="feature__categories-clothing">
-                    <img src="./assets/img/main/feature/Clothing.svg" alt="Clothing" width="450px" height="730px;">
-                    <button class="categories__btn btn--white">Clothing</button>
+                <div class="relative col-1 overflow-hidden">
+                    <a class="zoom" href="">
+                        <img src="./assets/img/main/feature/Clothing.svg" alt="Clothing" width="450px" height="730px;">
+                    </a>
+                    <button class="absolute btn btn-light fs-16 fw-600 lh px-47 py-12 rounded-circle-35 bottom-34 left-145">Clothing</button>
                 </div>
 
                 <!-- Sunglasses -->
-                <div class="feature__categories-sunglasses">
-                    <img src="./assets/img/main/feature/Sunglasses.svg" alt="Sunglasses" width="450px" height="350px">
-                    <button class="categories__btn btn--white">Sunglasses</button>
+                <div class="relative ml-5 mr-5 overflow-hidden">
+                    <a class="zoom" href="">
+                        <img src="./assets/img/main/feature/Sunglasses.svg" alt="Sunglasses" width="450px" height="350px">
+                    </a>
+                    <button class="absolute btn btn-dark fs-16 fw-600 lh px-42 py-12 rounded-circle-35 bottom-34 left-135">Sunglasses</button>
                 </div>
 
                 <!-- Bags -->
-                <div class="feature__categories-bags">
-                    <img src="./assets/img/main/feature/Bags.svg" alt="Bags" width="450px" height="350px">
-                    <button class="categories__btn btn--white">Bags</button>
+                <div class="relative ml-5 mr-5 overflow-hidden">
+                    <a class="zoom" href="">
+                        <img src="./assets/img/main/feature/Bags.svg" alt="Bags" width="450px" height="350px">
+                    </a>
+                    <button class="absolute btn btn-light btn-sm bottom-34 left-157">Bags</button>
                 </div>
 
                 <!-- Sneaker -->
-                <div class="feature__categories-sneaker">
-                    <img src="./assets/img/main/feature/Sneaker.svg" alt="Sneaker" width="450px" height="730px;">
-                    <button class="categories__btn btn--white">Sneaker</button>
+                <div class="relative col-3 overflow-hidden">
+                    <a class="zoom" href="">
+                        <img src="./assets/img/main/feature/Sneaker.svg" alt="Sneaker" width="450px" height="730px;">
+                    </a>
+                    <button class="absolute btn btn-light btn-sm bottom-34 left-145">Sneaker</button>
                 </div>
             </div>
         </div>
 
         <!-- Trending This Week -->
-        <div class="box">
+        <div class="mt-80 ml-255 mr-255">
             <!-- Title -->
-            <div class="box__title trending__title">
-                <h1>Trending this Week</h1>
-                <p>Here’s some of our most popular products people are in love with.</p>
-            </div>
-
-            <!-- Text -->
-            <div class="trending__text">
-                <ul>
+            <div class="text-center">
+                <h1 class="fs-45 fw-400 lh-65">Trending this Week</h1>
+                <ul class="d-flex gap-5 fs-14 fw-500 lh justify-content-center mt-30">
                     <li>
-                        <a href="#!">TOPS</a>
+                        <a class="px-25 py-7" href="#!">TOPS</a>
                     </li>
                     <li>
-                        <a href="#!">DRESSES</a>
+                        <a class="px-25 py-7" href="#!">DRESSES</a>
                     </li>
                     <li>
-                        <a href="#!">T-SHIRT</a>
+                        <a class="px-25 py-7" href="#!">T-SHIRT</a>
                     </li>
                     <li>
-                        <a href="#!">BAGS</a>
+                        <a class="px-25 py-7" href="#!">BAGS</a>
                     </li>
                     <li>
-                        <a href="#!">SHOES</a>
+                        <a class="px-25 py-7" href="#!">SHOES</a>
                     </li>
                 </ul>
             </div>
 
-            <!-- Mobile Button -->
-            <div class="mobile__btn">
-                <a class="mobile__btn--prev">&#10094;</a>
-                <a class="mobile__btn--next">&#10095;</a>
-            </div>
-
             <!-- Products -->
-            <div class="box__products">
+            <div class="d-flex gap-30 mt-47">
                 <!-- 1 -->
                 <div class="box__product-1">
                     <img src="./assets/img/main/trending/pro1.svg" alt="pro1" width="330px" height="440px">
@@ -587,7 +418,8 @@
                 <!-- 1 -->
                 <div class="people__txt-box">
                     <img src="./assets/img/main/people/img1.svg" alt="img1" width="70px" height="70px">
-                    <p>A perfect product, it keeps you very warm without over heating. True to size, I couldn't be happier with the purchase... Thank you! 🤗</p>
+                    <p>A perfect product, it keeps you very warm without over heating. True to size, I couldn't be
+                        happier with the purchase... Thank you! 🤗</p>
                     <div class="people__txt-name">
                         <img src="./assets/img/main/people/rate.svg" alt="rate" width="64px" height="12px">
                         <p>Algistino Lionel - Verified Buyer</p>
@@ -597,7 +429,8 @@
                 <!-- 2 -->
                 <div class="people__txt-box">
                     <img src="./assets/img/main/people/img2.svg" alt="img2" width="70px" height="70px">
-                    <p>Great to be able to order everything I needed from the comfort of my home and the delivery was extremely quick. Recommend... 🥰</p>
+                    <p>Great to be able to order everything I needed from the comfort of my home and the delivery was
+                        extremely quick. Recommend... 🥰</p>
                     <div class="people__txt-name">
                         <img src="./assets/img/main/people/rate.svg" alt="rate" width="64px" height="12px">
                         <p>Algistino Lionel - Verified Buyer</p>
@@ -607,7 +440,8 @@
                 <!-- 3 -->
                 <div class="people__txt-box">
                     <img src="./assets/img/main/people/img3.svg" alt="img3" width="70px" height="70px">
-                    <p>These are sooo pretty and very comfy. Perfect color as well. I love wearing these with a neutral top and Chelsea boots. Wicked cute...😍 </p>
+                    <p>These are sooo pretty and very comfy. Perfect color as well. I love wearing these with a neutral
+                        top and Chelsea boots. Wicked cute...😍 </p>
                     <div class="people__txt-name">
                         <img src="./assets/img/main/people/rate.svg" alt="rate" width="64px" height="12px">
                         <p>Algistino Lionel - Verified Buyer</p>
@@ -700,7 +534,8 @@
                     <img src="./assets/img/footer/about/05.svg" alt="social" width="36px" height="36px">
                 </div>
                 <label class="footer__about-followShop">
-                    <img src="./assets/img/footer/about/follow on shop.svg" alt="follow on shop" width="156px" height="36px">
+                    <img src="./assets/img/footer/about/follow on shop.svg" alt="follow on shop" width="156px"
+                        height="36px">
                 </label>
             </div>
 
@@ -760,7 +595,8 @@
             <!-- Newsletter -->
             <div class="footer__newsletter">
                 <h1>SIGN UP TO NEWSLETTER</h1>
-                <p>Enter your email address to get $10 off your first order and free shipping. Updates information on Sales and Offers.</p>
+                <p>Enter your email address to get $10 off your first order and free shipping. Updates information on
+                    Sales and Offers.</p>
                 <div class="footer__newsletter-input">
                     <input type="email" placeholder="       Enter your email">
                     <button class="footer__newsletter-btn btn--black">SUBSCRIBE</button>
@@ -837,6 +673,9 @@
         </div>
     </footer>
 
-    <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
