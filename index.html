@@ -21,7 +21,7 @@
     <title>Figma To Web</title>
 </head>
 
-<body>
+<body class="mb-200">
     <!-- Header -->
     <header>
         <!-- Notification -->
@@ -81,7 +81,7 @@
             </div>
                 
             <!-- Navs -->
-            <div class=" pt-25 pb-20">
+            <div class="pt-25 pb-20">
                 <ul class="d-flex justify-content-between fs-16 fw-500 lh">
                     <li>
                         <a class="px-15" href="">
@@ -150,7 +150,7 @@
     <!-- Main -->
     <main>
         <!-- Slider -->
-        <div class="swiper mySwiper">
+        <div class="swiper mySwiper overflow-hidden">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                     <a href="">
@@ -186,7 +186,7 @@
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
-          </div>
+        </div>
 
         <!-- Feature Categories -->
         <div class="mt-85 mx-auto">
@@ -257,20 +257,21 @@
             </div>
 
             <!-- Products -->
-            <div class="d-flex row justify-content-center gap-30 mt-47 mb-200">
+            <div class="d-flex justify-content-center gap-30 mt-47">
                 <!-- 1 -->
-                <div class="col-auto">
+                <div class="col-auto mt-2">
                     <!-- Img -->
                     <div class="wrapper-hidden wrapper-change overflow-hidden relative rounded-circle-10">
                         <a href="">
-                            <img id="productImage" class="img-hidden" src="assets/img/main/trending/pro1.svg" alt="pro">
+                            <img class="productImage img-hidden" src="assets/img/main/trending/pro1.svg" alt="pro">
                         </a>
                         <a href="">
                             <img class="img-change absolute left-0" src="assets/img/main/trending/change1.jpg" alt="change1" height="440px" width="330px">
                         </a>
                     </div>
 
-                    <div class="mt-16">
+                    <!-- Text -->
+                    <div class="mt-14">
                         <!-- Name -->
                         <h3 class="fs-16 fw-400 lh text-hover-gray">
                             <a href="">
@@ -280,16 +281,16 @@
 
                         <!-- Rate -->
                         <div class="d-flex flex-row-reverse justify-content-start mt-2">
-                            <input class="rate-input d-none" type="radio" id="star1" name="rate" value="1">
-                            <label class="rate-label cursor-pointer color-gray fs-16" for="star1">&#9733;</label>
-                            <input class="rate-input d-none" type="radio" id="star2" name="rate" value="2">
-                            <label class="rate-label cursor-pointer color-gray fs-16" for="star2">&#9733;</label>
-                            <input class="rate-input d-none" type="radio" id="star3" name="rate" value="3">
-                            <label class="rate-label cursor-pointer color-gray fs-16" for="star3">&#9733;</label>
-                            <input class="rate-input d-none" type="radio" id="star4" name="rate" value="4">
-                            <label class="rate-label cursor-pointer color-gray fs-16" for="star4">&#9733;</label>
-                            <input class="rate-input d-none" type="radio" id="star5" name="rate" value="5">
-                            <label class="rate-label cursor-pointer color-gray fs-16" for="star5">&#9733;</label>
+                            <input class="rate-input d-none" type="radio" id="star1-1" name="rate" value="1">
+                            <label class="rate-label cursor-pointer color-gray fs-16" for="star1-1">&#9733;</label>
+                            <input class="rate-input d-none" type="radio" id="star2-1" name="rate" value="2">
+                            <label class="rate-label cursor-pointer color-gray fs-16" for="star2-1">&#9733;</label>
+                            <input class="rate-input d-none" type="radio" id="star3-1" name="rate" value="3">
+                            <label class="rate-label cursor-pointer color-gray fs-16" for="star3-1">&#9733;</label>
+                            <input class="rate-input d-none" type="radio" id="star4-1" name="rate" value="4">
+                            <label class="rate-label cursor-pointer color-gray fs-16" for="star4-1">&#9733;</label>
+                            <input class="rate-input d-none" type="radio" id="star5-1" name="rate" value="5">
+                            <label class="rate-label cursor-pointer color-gray fs-16" for="star5-1">&#9733;</label>
                         </div>
 
                         <!-- Price -->
@@ -301,25 +302,26 @@
 
                         <!-- Color -->
                         <div class="mt-10">
-                            <span class="btn btn-color bg-beige mr-5" onclick="changeImage('assets/img/main/trending/pro1.svg')"></span>
-                            <span class="btn btn-color bg-brown mr-5" onclick="changeImage('assets/img/main/trending/1.jpg')"></span>
+                            <span class="btn btn-color bg-beige mr-5" onclick="changeImage(this, 'assets/img/main/trending/pro1.svg')"></span>
+                            <span class="btn btn-color bg-brown mr-5" onclick="changeImage(this, 'assets/img/main/trending/1.jpg')"></span>
                         </div>
                     </div>
                 </div>
 
                 <!-- 2 -->
-                <div class="col-auto">
+                <div class="col-auto mt-2">
                     <!-- Img -->
                     <div class="wrapper-hidden wrapper-change overflow-hidden relative rounded-circle-10">
                         <a href="">
-                            <img id="productImage" class="img-hidden" src="assets/img/main/trending/pro2.svg" alt="pro">
+                            <img class="productImage img-hidden" src="assets/img/main/trending/pro2.svg" alt="pro">
                         </a>
                         <a href="">
                             <img class="img-change absolute left-0" src="assets/img/main/trending/change2.jpg" alt="change1" height="440px" width="330px">
                         </a>
                     </div>
 
-                    <div class="mt-16">
+                    <!-- Text -->
+                    <div class="mt-14">
                         <!-- Name -->
                         <h3 class="fs-16 fw-400 lh text-hover-gray">
                             <a href="">
@@ -329,16 +331,16 @@
 
                         <!-- Rate -->
                         <div class="d-flex flex-row-reverse justify-content-start mt-2">
-                            <input class="rate-input d-none" type="radio" id="star1" name="rate" value="1">
-                            <label class="rate-label cursor-pointer color-gray fs-16" for="star1">&#9733;</label>
-                            <input class="rate-input d-none" type="radio" id="star2" name="rate" value="2">
-                            <label class="rate-label cursor-pointer color-gray fs-16" for="star2">&#9733;</label>
-                            <input class="rate-input d-none" type="radio" id="star3" name="rate" value="3">
-                            <label class="rate-label cursor-pointer color-gray fs-16" for="star3">&#9733;</label>
-                            <input class="rate-input d-none" type="radio" id="star4" name="rate" value="4">
-                            <label class="rate-label cursor-pointer color-gray fs-16" for="star4">&#9733;</label>
-                            <input class="rate-input d-none" type="radio" id="star5" name="rate" value="5">
-                            <label class="rate-label cursor-pointer color-gray fs-16" for="star5">&#9733;</label>
+                            <input class="rate-input d-none" type="radio" id="star1-2" name="rate" value="1">
+                            <label class="rate-label cursor-pointer color-gray fs-16" for="star1-2">&#9733;</label>
+                            <input class="rate-input d-none" type="radio" id="star2-2" name="rate" value="2">
+                            <label class="rate-label cursor-pointer color-gray fs-16" for="star2-2">&#9733;</label>
+                            <input class="rate-input d-none" type="radio" id="star3-2" name="rate" value="3">
+                            <label class="rate-label cursor-pointer color-gray fs-16" for="star3-2">&#9733;</label>
+                            <input class="rate-input d-none" type="radio" id="star4-2" name="rate" value="4">
+                            <label class="rate-label cursor-pointer color-gray fs-16" for="star4-2">&#9733;</label>
+                            <input class="rate-input d-none" type="radio" id="star5-2" name="rate" value="5">
+                            <label class="rate-label cursor-pointer color-gray fs-16" for="star5-2">&#9733;</label>
                         </div>
 
                         <!-- Price -->
@@ -350,25 +352,26 @@
 
                         <!-- Color -->
                         <div class="mt-10">
-                            <span class="btn btn-color bg-beige mr-5" onclick="changeImage('assets/img/main/trending/pro1.svg')"></span>
-                            <span class="btn btn-color bg-brown mr-5" onclick="changeImage('assets/img/main/trending/1.jpg')"></span>
+                            <span class="btn btn-color bg-beige mr-5" onclick="changeImage(this, 'assets/img/main/trending/pro2.svg')"></span>
+                            <span class="btn btn-color bg-red mr-5" onclick="changeImage(this, 'assets/img/main/trending/2.jpg')"></span>
                         </div>
                     </div>
                 </div>
 
                 <!-- 3 -->
-                <div class="col-auto">
+                <div class="col-auto mt-2">
                     <!-- Img -->
                     <div class="wrapper-hidden wrapper-change overflow-hidden relative rounded-circle-10">
                         <a href="">
-                            <img id="productImage" class="img-hidden" src="assets/img/main/trending/pro3.svg" alt="pro">
+                            <img class="productImage img-hidden" src="assets/img/main/trending/pro3.svg" alt="pro">
                         </a>
                         <a href="">
                             <img class="img-change absolute left-0" src="assets/img/main/trending/change3.jpg" alt="change1" height="440px" width="330px">
                         </a>
                     </div>
 
-                    <div class="mt-16">
+                    <!-- Text -->
+                    <div class="mt-14">
                         <!-- Name -->
                         <h3 class="fs-16 fw-400 lh text-hover-gray">
                             <a href="">
@@ -378,16 +381,16 @@
 
                         <!-- Rate -->
                         <div class="d-flex flex-row-reverse justify-content-start mt-2">
-                            <input class="rate-input d-none" type="radio" id="star1" name="rate" value="1">
-                            <label class="rate-label cursor-pointer color-gray fs-16" for="star1">&#9733;</label>
-                            <input class="rate-input d-none" type="radio" id="star2" name="rate" value="2">
-                            <label class="rate-label cursor-pointer color-gray fs-16" for="star2">&#9733;</label>
-                            <input class="rate-input d-none" type="radio" id="star3" name="rate" value="3">
-                            <label class="rate-label cursor-pointer color-gray fs-16" for="star3">&#9733;</label>
-                            <input class="rate-input d-none" type="radio" id="star4" name="rate" value="4">
-                            <label class="rate-label cursor-pointer color-gray fs-16" for="star4">&#9733;</label>
-                            <input class="rate-input d-none" type="radio" id="star5" name="rate" value="5">
-                            <label class="rate-label cursor-pointer color-gray fs-16" for="star5">&#9733;</label>
+                            <input class="rate-input d-none" type="radio" id="star1-3" name="rate" value="1">
+                            <label class="rate-label cursor-pointer color-gray fs-16" for="star1-3">&#9733;</label>
+                            <input class="rate-input d-none" type="radio" id="star2-3" name="rate" value="2">
+                            <label class="rate-label cursor-pointer color-gray fs-16" for="star2-3">&#9733;</label>
+                            <input class="rate-input d-none" type="radio" id="star3-3" name="rate" value="3">
+                            <label class="rate-label cursor-pointer color-gray fs-16" for="star3-3">&#9733;</label>
+                            <input class="rate-input d-none" type="radio" id="star4-3" name="rate" value="4">
+                            <label class="rate-label cursor-pointer color-gray fs-16" for="star4-3">&#9733;</label>
+                            <input class="rate-input d-none" type="radio" id="star5-3" name="rate" value="5">
+                            <label class="rate-label cursor-pointer color-gray fs-16" for="star5-3">&#9733;</label>
                         </div>
 
                         <!-- Price -->
@@ -399,25 +402,26 @@
 
                         <!-- Color -->
                         <div class="mt-10">
-                            <span class="btn btn-color bg-beige mr-5" onclick="changeImage('assets/img/main/trending/pro1.svg')"></span>
-                            <span class="btn btn-color bg-brown mr-5" onclick="changeImage('assets/img/main/trending/1.jpg')"></span>
+                            <span class="btn btn-color bg-beige mr-5" onclick="changeImage(this, 'assets/img/main/trending/pro3.svg')"></span>
+                            <span class="btn btn-color bg-gray mr-5" onclick="changeImage(this, 'assets/img/main/trending/3.jpg')"></span>
                         </div>
                     </div>
                 </div>
 
                 <!-- 4 -->
-                <div class="col-auto">
+                <div class="col-auto mt-2">
                     <!-- Img -->
                     <div class="wrapper-hidden wrapper-change overflow-hidden relative rounded-circle-10">
                         <a href="">
-                            <img id="productImage" class="img-hidden" src="assets/img/main/trending/pro4.svg" alt="pro">
+                            <img class="productImage img-hidden" src="assets/img/main/trending/pro4.svg" alt="pro">
                         </a>
                         <a href="">
                             <img class="img-change absolute left-0" src="assets/img/main/trending/change4.jpg" alt="change1" height="440px" width="330px">
                         </a>
                     </div>
 
-                    <div class="mt-16">
+                    <!-- Text -->
+                    <div class="mt-14">
                         <!-- Name -->
                         <h3 class="fs-16 fw-400 lh text-hover-gray">
                             <a href="">
@@ -427,16 +431,16 @@
 
                         <!-- Rate -->
                         <div class="d-flex flex-row-reverse justify-content-start mt-2">
-                            <input class="rate-input d-none" type="radio" id="star1" name="rate" value="1">
-                            <label class="rate-label cursor-pointer color-gray fs-16" for="star1">&#9733;</label>
-                            <input class="rate-input d-none" type="radio" id="star2" name="rate" value="2">
-                            <label class="rate-label cursor-pointer color-gray fs-16" for="star2">&#9733;</label>
-                            <input class="rate-input d-none" type="radio" id="star3" name="rate" value="3">
-                            <label class="rate-label cursor-pointer color-gray fs-16" for="star3">&#9733;</label>
-                            <input class="rate-input d-none" type="radio" id="star4" name="rate" value="4">
-                            <label class="rate-label cursor-pointer color-gray fs-16" for="star4">&#9733;</label>
-                            <input class="rate-input d-none" type="radio" id="star5" name="rate" value="5">
-                            <label class="rate-label cursor-pointer color-gray fs-16" for="star5">&#9733;</label>
+                            <input class="rate-input d-none" type="radio" id="star1-4" name="rate" value="1">
+                            <label class="rate-label cursor-pointer color-gray fs-16" for="star1-4">&#9733;</label>
+                            <input class="rate-input d-none" type="radio" id="star2-4" name="rate" value="2">
+                            <label class="rate-label cursor-pointer color-gray fs-16" for="star2-4">&#9733;</label>
+                            <input class="rate-input d-none" type="radio" id="star3-4" name="rate" value="3">
+                            <label class="rate-label cursor-pointer color-gray fs-16" for="star3-4">&#9733;</label>
+                            <input class="rate-input d-none" type="radio" id="star4-4" name="rate" value="4">
+                            <label class="rate-label cursor-pointer color-gray fs-16" for="star4-4">&#9733;</label>
+                            <input class="rate-input d-none" type="radio" id="star5-4" name="rate" value="5">
+                            <label class="rate-label cursor-pointer color-gray fs-16" for="star5-4">&#9733;</label>
                         </div>
 
                         <!-- Price -->
@@ -448,14 +452,68 @@
 
                         <!-- Color -->
                         <div class="mt-10">
-                            <span class="btn btn-color bg-beige mr-5" onclick="changeImage('assets/img/main/trending/pro1.svg')"></span>
-                            <span class="btn btn-color bg-brown mr-5" onclick="changeImage('assets/img/main/trending/1.jpg')"></span>
+                            <span class="btn btn-color bg-white mr-5" onclick="changeImage(this, 'assets/img/main/trending/pro4.svg')"></span>
+                            <span class="btn btn-color bg-black mr-5" onclick="changeImage(this, 'assets/img/main/trending/4.jpg')"></span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Banner -->
+        <div class="d-flex justify-content-center mt-98 gap-30">
+            <!-- 1 -->
+            <div class="col-auto relative wrapper-zoom">
+                <!-- Img -->
+                <div class="overflow-hidden rounded-circle-10">
+                    <a href="">
+                        <img class="img-zoom img-banner" src="./assets/img/main/banner/banner1.svg" alt="banner1">
+                    </a>
+                </div>
+
+                <!-- Text -->
+                <div class="absolute left-50 bottom-94">
+                    <h4 class="fs-12 fw-500 lh mb-2">ONLINE EXCLUSIVE</h4>
+                    <h3 class="fs-36 fw-400 lh-50 mb-8">Oversized Shirt</h3>
+                    <a class="fs-12 fw-600 lh-25 btn-link" href="#!">SHOP THE LOOK</a>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="col-auto relative wrapper-zoom">
+                <!-- Img -->
+                <div class="overflow-hidden rounded-circle-10">
+                    <a href="">
+                        <img class="img-zoom img-banner" src="./assets/img/main/banner/banner2.svg" alt="banner2">
+                    </a>
+                </div>
+
+                <!-- Text -->
+                <div class="absolute left-50 bottom-94">
+                    <h4 class="fs-12 fw-500 lh mb-2">BEST-SELLERS</h4>
+                    <h3 class="fs-36 fw-400 lh-50 mb-8">Unique SS’23</h3>
+                    <a class="fs-12 fw-600 lh-25 btn-link" href="#!">SHOP THE LOOK</a>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="col-auto relative wrapper-zoom">
+                <!-- Img -->
+                <div class="overflow-hidden rounded-circle-10">
+                    <a href="">
+                        <img class="img-zoom img-banner" src="./assets/img/main/banner/banner3.svg" alt="banner3">
+                    </a>
+                </div>
+
+                <!-- Text -->
+                <div class="absolute left-50 bottom-94">
+                    <h4 class="fs-12 fw-500 lh mb-2">LIMITED EDITION</h4>
+                    <h3 class="fs-36 fw-400 lh-50 mb-8">Autumn Trends</h3>
+                    <a class="fs-12 fw-600 lh-25 btn-link" href="#!">SHOP THE LOOK</a>
+                </div>
+            </div>
+        </div>
+    </main>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>

@@ -1,3 +1,4 @@
+// ===Slider===
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
@@ -12,7 +13,12 @@ var swiper = new Swiper(".mySwiper", {
     },
   });
 
-// -------
-function changeImage(imageSrc) {
-  document.getElementById("productImage").src = imageSrc;
+// ===Color-products===
+function changeImage(element, imageSrc) {
+  // Tìm phần tử cha chứa ảnh của nút bấm
+  let parentDiv = element.closest(".col-auto");
+  // Tìm ảnh cần thay đổi trong phần tử cha
+  let productImage = parentDiv.querySelector(".productImage");
+  // Cập nhật ảnh
+  productImage.src = imageSrc;
 }
