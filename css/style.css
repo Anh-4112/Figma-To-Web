@@ -1,0 +1,76 @@
+html {
+    font-family: Jost;   
+}
+
+:root {
+    --dark-blue-gray: #515D66;
+}
+
+/* === Background Color =============== */
+.bg-dark-blue-gray {
+    background: var(--dark-blue-gray);
+}
+
+/* === Color =============== */
+.color-dark-blue-gray {
+    color: var(--dark-blue-gray);
+}
+
+/* === Justify Content ========= */
+.justify-content-start {
+    justify-content: start;
+}
+
+.justify-content-end {
+    justify-content: end;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+
+/* === Display ========= */
+.d-flex {
+    display: flex;
+}
+
+/* === Gap ========= */
+.gap-5 {
+    gap: 0.5rem;
+}
+
+/* === Text ========= */
+.ls-0 {
+    letter-spacing: 0%;
+}
+
+.va-middle {
+    vertical-align: middle;
+}
+
+/* === Line Height ========= */
+.lh {
+    line-height: 100%;
+}
+
+/* === Font Weight ========= */
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+/* === Font Size ========= */
+.fs-13 {
+    font-size: 1.3rem;
+}
