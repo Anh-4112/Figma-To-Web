@@ -1,7 +1,7 @@
 html {
     font-size: 62.5%;
     font-family: "Bai Jamjuree", sans-serif;
-    /* background: #000; */
+    /* background: orangered; */
 }
 
 a {
@@ -10,10 +10,12 @@ a {
 }
 
 :root {
+    --white: #FFFFFF;
     --light-blue-gray: #E5E8EC;
     --dark-blue-gray: #515D66;
     --dark-blue: #2B38D1;    
     --dark-gray: #212529;
+    --bs-font-bai-jamjuree: Bai Jamjuree;
 }
 
 /* === Background Color =============== */
@@ -34,6 +36,10 @@ a {
 }
 
 /* === Color =============== */
+.color-white {
+    color: var(--white);
+}
+
 .color-dark-blue-gray {
     color: var(--dark-blue-gray);
 }
@@ -54,6 +60,69 @@ a {
 /* === Cursor ========= */
 .cursor-pointer {
     cursor: pointer;
+}
+
+/* === Border ========= */
+.border {
+    border: solid;
+}
+
+.border-none {
+    border: none;
+    outline: none;
+}
+
+.border-top {
+    border-top: solid;
+}
+
+.border-left {
+    border-left: solid;
+}
+
+.border-bottom {
+    border-bottom: solid;
+}
+
+.border-right {
+    border-right: solid;
+}
+
+.border-1 {
+    border-width: 0.1rem;
+}
+
+.border-2 {
+    border-width: 0.2rem;
+}
+
+.border-light-blue-gray {
+    border-color: var(--light-blue-gray);
+}
+
+/*=== Rounded =================*/
+.rounded-circle-5 {
+    border-radius: 0.5rem;
+}
+
+/*=== Rounded Top Left =================*/
+.rounded-top-left-5 {
+    border-top-left-radius: 0.5rem;
+}
+
+/*=== Rounded Bottom Left =================*/
+.rounded-bottom-left-5 {
+    border-bottom-left-radius: 0.5rem;
+}
+
+/*=== Rounded Top Right =================*/
+.rounded-top-right-5 {
+    border-top-right-radius: 0.5rem;
+}
+
+/*=== Rounded Bottom Right =================*/
+.rounded-bottom-right-5 {
+    border-bottom-right-radius: 0.5rem;
 }
 
 /* === Justify Content ========= */
@@ -97,6 +166,10 @@ a {
 }
 
 /* === Display ========= */
+.d-none {
+    display: none;
+}
+
 .d-flex {
     display: flex;
 }
@@ -113,6 +186,18 @@ a {
     flex-wrap: nowrap;
 }
 
+.flex-1 {
+    flex: 1;
+}
+
+.flex-50p {
+    flex: 0 0 50%;
+}
+
+.flex-100p {
+    flex: 0 0 100%;
+}
+
 /* === Gap ========= */
 .gap-3 {
     gap: 0.3rem;
@@ -123,6 +208,10 @@ a {
 }
 
 /* === Text ========= */
+.font-bai-jamjuree {
+    font-family: var(--bs-font-bai-jamjuree);
+}
+
 .ls-0 {
     letter-spacing: 0%;
 }
@@ -154,7 +243,19 @@ a {
     font-size: 1.3rem;
 }
 
+.fs-14 {
+    font-size: 1.4rem;
+}
+
 /* === Padding Top ========= */
+.pt-1 {
+    padding-top: 0.1rem;
+}
+
+.pt-3 {
+    padding-top: 0.3rem;
+}
+
 .pt-13 {
     padding-top: 1.3rem;
 }
@@ -163,9 +264,25 @@ a {
     padding-top: 1.4rem;
 }
 
+.pt-20 {
+    padding-top: 2rem;
+}
+
 /* === Padding Left ========= */
 .pl-4 {
     padding-left: 0.4rem;
+}
+
+.pl-20 {
+    padding-left: 2rem;
+}
+
+.pl-23 {
+    padding-left: 2.3rem;
+}
+
+.pl-26 {
+    padding-left: 2.6rem;
 }
 
 /* === Padding Bottom ========= */
@@ -174,8 +291,31 @@ a {
 }
 
 /* === Padding Right ========= */
+.pr-26 {
+    padding-right: 2.6rem;
+}
+
+.pr-30 {
+    padding-right: 3rem;
+}
+
 /* === Padding X ========= */
+.px-15 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.px-32 {
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+}
+
 /* === Padding Y ========= */
+.py-13 {
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+}
+
 /* === Margin Top ========= */
 /* === Margin Left ========= */
 /* === Margin Bottom ========= */

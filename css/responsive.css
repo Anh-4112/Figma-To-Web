@@ -16,6 +16,10 @@
 
 /* md */
 @media screen and (min-width: 768px) {
+    .d-md-block {
+        display: block;
+    }
+    
     .flex-md-row {
         flex-direction: row;
     }
@@ -28,9 +32,34 @@
 
 /* lg */
 @media screen and (min-width: 992px) {
+    .order-lg-0 {
+         order: 0; /*xác định thứ tự hiển thị phần tử con trong khối d-flex*/
+    }
+
+    .order-lg-1 {
+        order: 1;
+    }
+
+    .order-lg-2 {
+        order: 2;
+    }
+    
+    .flex-lg-20p {
+        flex: 0 0 20%;
+    }
+
+    .flex-lg-60p {
+        flex: 0 0 60%;
+    }
+    
     .px-lg-20 {
         padding-left: 2rem;
         padding-right: 2rem;
+    }
+
+    .py-lg-0 {
+        padding-top: 0;
+        padding-bottom: 0;
     }
     
     .mx-lg-0 {
