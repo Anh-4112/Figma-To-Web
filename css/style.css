@@ -1,14 +1,36 @@
 html {
-    font-family: Jost;   
+    font-size: 62.5%;
+    font-family: "Bai Jamjuree", sans-serif;
+    /* background: #000; */
+}
+
+a {
+    text-decoration: none;
+	color: var(--dark-gray);
 }
 
 :root {
+    --light-blue-gray: #E5E8EC;
     --dark-blue-gray: #515D66;
+    --dark-blue: #2B38D1;    
+    --dark-gray: #212529;
 }
 
 /* === Background Color =============== */
+.bg-light-blue-gray {
+    background: var(--light-blue-gray);
+}
+
 .bg-dark-blue-gray {
     background: var(--dark-blue-gray);
+}
+
+.bg-dark-blue {
+    background: var(--dark-blue);
+}
+
+.bg-dark-gray {
+    background: var(--dark-gray);
 }
 
 /* === Color =============== */
@@ -16,25 +38,62 @@ html {
     color: var(--dark-blue-gray);
 }
 
+.color-dark-blue {
+    color: var(--dark-blue);
+}
+
+.color-dark-gray {
+    color: var(--dark-gray);
+}
+
+/* === Hover ========= */
+.hover-dark-blue:hover {
+    color: var(--dark-blue);
+}
+
+/* === Cursor ========= */
+.cursor-pointer {
+    cursor: pointer;
+}
+
 /* === Justify Content ========= */
-.justify-content-start {
+.justify-start {
     justify-content: start;
 }
 
-.justify-content-end {
+.justify-end {
     justify-content: end;
 }
 
-.justify-content-center {
+.justify-center {
     justify-content: center;
 }
 
-.justify-content-between {
+.justify-between {
     justify-content: space-between;
 }
 
-.justify-content-around {
+.justify-around {
     justify-content: space-around;
+}
+
+/*  === Align Items  ========= */
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-start {
+    align-items: start;
+}
+
+/* === Height ========= */
+.h-1 {
+    height: 0.1rem;
+}
+
+/* === Width ========= */
+.w-full {
+    width: 100%;
 }
 
 /* === Display ========= */
@@ -42,9 +101,25 @@ html {
     display: flex;
 }
 
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+
 /* === Gap ========= */
-.gap-5 {
-    gap: 0.5rem;
+.gap-3 {
+    gap: 0.3rem;
+}
+
+.gap-18 {
+    gap: 1.8rem;
 }
 
 /* === Text ========= */
@@ -54,6 +129,10 @@ html {
 
 .va-middle {
     vertical-align: middle;
+}
+
+.text-underline {
+    text-decoration: underline;
 }
 
 /* === Line Height ========= */
@@ -74,3 +153,37 @@ html {
 .fs-13 {
     font-size: 1.3rem;
 }
+
+/* === Padding Top ========= */
+.pt-13 {
+    padding-top: 1.3rem;
+}
+
+.pt-14 {
+    padding-top: 1.4rem;
+}
+
+/* === Padding Left ========= */
+.pl-4 {
+    padding-left: 0.4rem;
+}
+
+/* === Padding Bottom ========= */
+.pb-13 {
+    padding-bottom: 1.3rem;
+}
+
+/* === Padding Right ========= */
+/* === Padding X ========= */
+/* === Padding Y ========= */
+/* === Margin Top ========= */
+/* === Margin Left ========= */
+/* === Margin Bottom ========= */
+/* === Margin Right ========= */
+/* === Margin X ========= */
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* === Margin Y ========= */
