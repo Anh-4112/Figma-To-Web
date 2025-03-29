@@ -1,7 +1,7 @@
 html {
     font-size: 62.5%;
     font-family: "Bai Jamjuree", sans-serif;
-    width: 192rem;
+    /* width: 192rem; */
     /* background: orangered; */
 }
 
@@ -12,15 +12,21 @@ a {
 
 :root {
     --white: #FFFFFF;
+    --light-gray: #F1F5F6;
     --light-blue-gray: #E5E8EC;
     --dark-blue-gray: #515D66;
     --dark-blue: #2B38D1;    
     --dark-gray: #212529;
     --bs-font-bai-jamjuree: Bai Jamjuree;
     --width-body: auto;
+    --height-slideshow: 30rem;
 }
 
 /* === Background Color =============== */
+.bg-light-gray {
+    background: var(--light-gray);
+}
+
 .bg-light-blue-gray {
     background: var(--light-blue-gray);
 }
@@ -166,6 +172,18 @@ a {
     align-items: end;
 }
 
+/* === Overflow =============== */
+.overflow-hidden {
+    overflow: hidden;
+}
+
+/* === Img =============== */
+.img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 /* === Height ========= */
 .h-1 {
     height: 0.1rem;
@@ -223,8 +241,8 @@ a {
     gap: 0.4rem;
 }
 
-.gap-6 {
-    gap: 0.7rem;
+.gap-9 {
+    gap: 0.9rem;
 }
 
 .gap-10 {
@@ -295,6 +313,22 @@ a {
     font-size: 1.4rem;
 }
 
+/* === Slider ========= */
+.slideshow {
+    transition: transform 0.3s ease-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+    width: auto;
+    height: var(--height-slideshow);
+}
+
+.img-slide {
+    object-fit: cover;
+    object-position: 50% center;
+}
+
 /* === Padding Top ========= */
 .pt-1 {
     padding-top: 0.1rem;
@@ -308,12 +342,20 @@ a {
     padding-top: 1.1rem;
 }
 
+.pt-10 {
+    padding-top: 1rem;
+}
+
 .pt-12 {
     padding-top: 1.2rem;
 }
 
 .pt-13 {
     padding-top: 1.3rem;
+}
+
+.pt-30 {
+    padding-top: 3rem;
 }
 
 /* === Padding Left ========= */
@@ -342,8 +384,20 @@ a {
 }
 
 /* === Padding Bottom ========= */
+.pb-2 {
+    padding-bottom: 0.2rem;
+}
+
 .pb-11 {
     padding-bottom: 1.1rem;
+}
+
+.pb-12 {
+    padding-bottom: 1.2rem;
+}
+
+.pb-60 {
+    padding-bottom: 6rem;
 }
 
 /* === Padding Right ========= */
@@ -380,9 +434,9 @@ a {
     padding-bottom: 0.9rem;
 }
 
-.py-18 {
-    padding-top: 1.8rem;
-    padding-bottom: 1.8rem;
+.py-10 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 /* === Margin Top ========= */

@@ -33,6 +33,7 @@
 @media screen and (min-width: 768px) {
     :root {
         --width-body: 72rem;
+        --height-slideshow: 30.4rem;
     }
     
     .d-md-block {
@@ -167,5 +168,6 @@
 @media screen and (min-width: 1400px) {
     :root {
         --width-body: 141rem;
+        --height-slideshow: 40.9rem;
     }
 }
