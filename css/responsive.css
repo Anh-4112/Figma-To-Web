@@ -32,7 +32,7 @@
 /* md */
 @media screen and (min-width: 768px) {
     :root {
-        --width-body: 72rem;
+        --width-body: 75rem;
         --height-slideshow: 30.4rem;
     }
     
@@ -66,7 +66,7 @@
 /* lg */
 @media screen and (min-width: 992px) {
     :root {
-        --width-body: 94rem;
+        --width-body: 97rem;
     }
     
     .order-lg-0 {
@@ -117,6 +117,10 @@
         padding-top: 1.8rem;
     }
 
+    .pl-lg-10 {
+        padding-left: 1rem;
+    }
+
     .py-lg-2 {
         padding-top: 0.2rem;
         padding-bottom: 0.2rem;
@@ -131,7 +135,7 @@
 /* xl */
 @media screen and (min-width: 1200px) {
     :root {
-        --width-body: 114rem;
+        --width-body: 120rem;
     }
 
     .d-xl-none {
@@ -167,7 +171,7 @@
 /* xxl */
 @media screen and (min-width: 1400px) {
     :root {
-        --width-body: 141rem;
+        --width-body: 147rem;
         --height-slideshow: 40.9rem;
     }
 }

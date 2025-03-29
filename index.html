@@ -19,7 +19,7 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="d-flex flex-column flex-md-row justify-md-between px-xl-30 w-body mx-auto">
+        <div class="d-flex flex-column flex-md-row justify-md-between box-border px-xl-30 w-body mx-auto">
             <div class="d-flex gap-4 gap-xs-8 flex-xs-column mx-auto mx-md-0 pt-13">
                 <p class="color-dark-blue-gray fs-11 fs-lg-13 fw-500 mx-xs-auto">You are a student and students get 20% discount.</p>
                 <span class="fs-11 fs-lg-13 fw-600 cursor-pointer text-underline mx-xs-auto">Learn More</span>
@@ -60,7 +60,7 @@
 
         <div class="bg-light-blue-gray w-full h-1"></div>
 
-        <div class="d-flex justify-between flex-wrap pt-12 pt-lg-18 pb-xl-18 px-15 px-xl-30 w-body mx-auto">
+        <div class="d-flex justify-between flex-wrap pt-12 pt-lg-18 pb-xl-18 box-border px-15 px-xl-30 w-body mx-auto">
             <!-- Logo -->
             <div class="box-border flex-50p flex-lg-19p order-lg-0 pt-1 pt-lg-3">
                 <a href="#">
@@ -78,7 +78,7 @@
             </div>
 
             <!-- Icon -->
-            <div class="box-border flex-50p flex-lg-25p order-lg-2 d-flex gap-20 gap-xl-28 gap-xs-12 align-items-center justify-end">
+            <div class="box-border flex-50p flex-lg-25p order-lg-2 pl-lg-10 d-flex gap-20 gap-xl-28 gap-xs-12 align-items-center justify-end">
                 <!-- Menu Mobile -->
                 <div class="d-xl-none">
                     <span>
@@ -158,7 +158,7 @@
 
         <div class="d-xl-block bg-light-blue-gray w-full h-1 d-none"></div>
 
-        <div class="d-none d-xl-block d-xl-flex justify-between pt-10 pb-12 px-xl-30 w-body mx-auto">
+        <div class="d-none d-xl-block d-xl-flex justify-between pt-10 pb-12 box-border px-xl-30 w-body mx-auto">
             <ul class="d-flex gap-30 align-items-center">
                 <li>
                     <span class="fs-14 fw-600 lh ls-0">
@@ -235,13 +235,14 @@
 
     <!-- Main -->
     <main class="bg-light-gray pt-30 pb-60">
-        <div class="px-15 px-xl-30 w-body mx-auto">
+        <div class="box-border px-15 px-xl-30 w-body mx-auto">
             <!-- Slideshow -->
-            <div class="w-full overflow-hidden">
+            <div class="slideshow-wrapper relative overflow-hidden">
+
                 <div class="slideshow d-flex">
                     <!-- 1 -->
                     <div class="slide">
-                        <a href="#">
+                        <a href="https://github.com/Anh-4112/demo/blob/main/css/style.css">
                             <img class="img img-slide rounded-circle-5" src="assets/img/main/frame/slider/bg.jpg" alt="">
                         </a>
                     </div>
@@ -260,6 +261,12 @@
                         </a>
                     </div>
                 </div>
+
+                <div class="btn-slideshow-prev absolute top-44p left-30 fs-14 fw-400 h-50 w-50 rounded-circle-50p d-none d-xl-flex justify-center align-items-center cursor-pointer">&#10094;</div>
+                <div class="btn-slideshow-next absolute top-44p right-30 fs-14 fw-400 h-50 w-50 rounded-circle-50p d-none d-xl-flex justify-center align-items-center cursor-pointer">&#10095;</div>
+
+                <div class="slideshow-dots absolute bottom-10 left-center"></div>
+
             </div>
         </div>
     </main>
