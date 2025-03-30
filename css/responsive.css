@@ -1,5 +1,9 @@
 /* xs */
 @media screen and (max-width: 380.98px) {
+    :root {
+        --top-slideshow-txt: 15%;
+    }
+    
     .flex-xs-column {
         flex-direction: column;
     }
@@ -34,6 +38,9 @@
     :root {
         --width-body: 75rem;
         --height-slideshow: 30.4rem;
+        --left-slideshow-txt: 10rem;
+        --lh-slideshow-txt: 130%;
+        --fs-slideshow-txt: 3.5rem;
     }
     
     .d-md-block {
@@ -136,6 +143,10 @@
 @media screen and (min-width: 1200px) {
     :root {
         --width-body: 120rem;
+        --top-slideshow-txt: 15%;
+        --left-slideshow-txt: 19rem;
+        --lh-slideshow-txt: 110%;
+        --fs-slideshow-txt: 4.6rem;
     }
 
     .d-xl-none {
@@ -154,6 +165,10 @@
         gap: 2.8rem;
     }
 
+    .fs-xl-12 {
+        font-size: 1.2rem;
+    }
+
     .pb-xl-18 {
         padding-bottom: 1.8rem;
     }
@@ -161,6 +176,11 @@
     .px-xl-30 {
         padding-left: 3rem;
         padding-right: 3rem;
+    }
+
+    .py-xl-16 {
+        padding-top: 1.6rem;
+        padding-bottom: 1.6rem;
     }
 
     .mr-xl-5 {
@@ -173,5 +193,6 @@
     :root {
         --width-body: 147rem;
         --height-slideshow: 40.9rem;
+        --top-slideshow-txt: 24.5%;
     }
 }
