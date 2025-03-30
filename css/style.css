@@ -368,7 +368,6 @@ a {
 /* === Slider ========= */
 .slideshow {
     transition: transform 0.3s ease-out;
-    touch-action: none;
 }
 
 .slide {

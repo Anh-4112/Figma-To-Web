@@ -94,8 +94,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Bắt đầu kéo slide
     const dragStart = (e) => {
-        isDragging = false;
-        startX = e.pageX || e.touches[0].pageX;
+        isDragging = true;
+        startX = e.touches ? e.touches[0].pageX : e.pageX;
         deltaX = 0;
         slideshow.style.transition = "none";
     };
@@ -103,28 +103,29 @@ document.addEventListener("DOMContentLoaded", () => {
     // Xử lý khi đang kéo
     const dragging = (e) => {
         if (!isDragging) return;
-        e.preventDefault(); // Chặn hành vi mặc định để ngăn trình duyệt cuộn trang
-    
-        const x = e.pageX || e.touches[0].pageX;
+        
+        let x = e.touches ? e.touches[0].pageX : e.pageX;
         deltaX = x - startX;
+        
+        // Ngăn trình duyệt cuộn trang khi kéo slide
+        e.preventDefault();
+    
         const percentage = (-currentIndex * 100) + (deltaX / slideWidth) * 100;
         slideshow.style.transform = `translateX(${percentage}%)`;
     };
-    
 
     // Dừng kéo và xác định slide nào cần hiển thị
     const dragStop = () => {
         if (!isDragging) return;
         isDragging = false;
-
-        // Nếu kéo quá 10% chiều rộng slide, chuyển slide
-        const threshold = slideWidth * 0.1;
+    
+        const threshold = slideWidth * 0.1; // Nếu kéo quá 10% thì chuyển slide
         if (Math.abs(deltaX) > threshold) {
-            currentIndex = deltaX < 0 
+            currentIndex = deltaX < 0
                 ? Math.min(currentIndex + 1, slides.length - 1)
                 : Math.max(currentIndex - 1, 0);
         }
-
+    
         goToSlide(currentIndex, true);
     };
 
@@ -135,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
     slideshow.addEventListener("mouseleave", dragStop);
 
     // Lắng nghe sự kiện cảm ứng trên màn hình
-    slideshow.addEventListener("touchstart", dragStart);
+    slideshow.addEventListener("touchstart", dragStart, { passive: false });
     slideshow.addEventListener("touchmove", dragging, { passive: false });
     slideshow.addEventListener("touchend", dragStop);
 
