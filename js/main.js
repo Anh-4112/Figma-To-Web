@@ -131,9 +131,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("mouseup", dragStop);
     slideshow.addEventListener("mouseleave", dragStop);
 
-    // Lắng nghe sự kiện cảm ứng trên màn hình
+    // Lắng nghe sự kiện cảm ứng trên màn hình  { passive: false }
     slideshow.addEventListener("touchstart", dragStart);
-    slideshow.addEventListener("touchmove", dragging, { passive: false });
+    slideshow.addEventListener("touchmove", dragging,);
     slideshow.addEventListener("touchend", dragStop);
 
     // Sự kiện click vào prev
