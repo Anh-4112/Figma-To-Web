@@ -225,6 +225,10 @@ a {
 }
 
 /* === Height ========= */
+.h-full {
+    height: 100%;
+}
+
 .h-1 {
     height: 0.1rem;
 }
@@ -280,6 +284,10 @@ a {
     flex: 1;
 }
 
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
 .flex-50p {
     flex: 0 0 50%;
 }
@@ -295,6 +303,10 @@ a {
 
 .gap-4 {
     gap: 0.4rem;
+}
+
+.gap-5 {
+    gap: 0.5rem;
 }
 
 .gap-9 {
@@ -596,6 +608,10 @@ a {
 }
 
 /* === Margin Top ========= */
+.mt-5 {
+    margin-top: 0.5rem;
+}
+
 .mt-10 {
     margin-top: 1rem;
 }

@@ -31,6 +31,11 @@
     .d-sm-flex {
         display: flex;
     }
+
+    .w-sm-50p-gap-5 {
+        width: calc(50% - 0.5rem);
+    }
+
 }
 
 /* md */
@@ -53,6 +58,10 @@
 
     .justify-md-between {
         justify-content: space-between;
+    }
+
+    .w-md-33p-gap-5 {
+        width: calc(33.33% - 0.5rem);
     }
     
     .pt-md-14 {
