@@ -103,11 +103,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // Xử lý khi đang kéo
     const dragging = (e) => {
         if (!isDragging) return;
+        e.preventDefault(); // Chặn hành vi mặc định để ngăn trình duyệt cuộn trang
+    
         const x = e.pageX || e.touches[0].pageX;
         deltaX = x - startX;
         const percentage = (-currentIndex * 100) + (deltaX / slideWidth) * 100;
         slideshow.style.transform = `translateX(${percentage}%)`;
     };
+    
 
     // Dừng kéo và xác định slide nào cần hiển thị
     const dragStop = () => {
@@ -131,9 +134,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("mouseup", dragStop);
     slideshow.addEventListener("mouseleave", dragStop);
 
-    // Lắng nghe sự kiện cảm ứng trên màn hình  { passive: false }
+    // Lắng nghe sự kiện cảm ứng trên màn hình
     slideshow.addEventListener("touchstart", dragStart);
-    slideshow.addEventListener("touchmove", dragging,);
+    slideshow.addEventListener("touchmove", dragging, { passive: false });
     slideshow.addEventListener("touchend", dragStop);
 
     // Sự kiện click vào prev
