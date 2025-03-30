@@ -385,7 +385,9 @@ a {
 }
 
 /* === Z-index ========= */
-
+.z-index-2 {
+    z-index: 2;
+}
 
 /* === Btn ========= */
 .btn-slideshow-prev,
@@ -550,10 +552,6 @@ a {
     padding-bottom: 1.1rem;
 }
 
-.pb-12 {
-    padding-bottom: 1.2rem;
-}
-
 .pb-60 {
     padding-bottom: 6rem;
 }
@@ -598,6 +596,10 @@ a {
 }
 
 /* === Margin Top ========= */
+.mt-10 {
+    margin-top: 1rem;
+}
+
 .mt-30 {
     margin-top: 3rem;
 }
