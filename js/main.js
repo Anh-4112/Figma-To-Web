@@ -79,10 +79,12 @@ document.addEventListener("DOMContentLoaded", () => {
             if (clickPrevented) {
                 e.preventDefault();
                 e.stopImmediatePropagation();
+            } else {
+                window.location.href = a.href; // Điều hướng trang nếu không bị chặn
             }
         });
     });
-
+    
     // Hàm di chuyển đến slide nhất định
     const goToSlide = (index, smooth = true) => {
         if (!slideshow) return;

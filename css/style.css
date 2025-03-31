@@ -224,6 +224,12 @@ a {
     height: 100%;
 }
 
+.img-banner {
+    object-fit: cover;
+    object-position: 100% center;
+}
+
+
 /* === Height ========= */
 .h-full {
     height: 100%;
@@ -237,6 +243,10 @@ a {
     height: 5rem;
 }
 
+.h-135 {
+    height: 13.5rem;
+}
+
 /* === Width ========= */
 .w-body {
     width: var(--width-body);
@@ -247,12 +257,12 @@ a {
     width: 100%;
 }
 
-.w-50 {
-    width: 5rem;
+.w-max-content {
+    width: max-content;
 }
 
-.w-152 {
-    width: 15.2rem;
+.w-50 {
+    width: 5rem;
 }
 
 /* === Display ========= */
@@ -333,6 +343,7 @@ a {
     gap: 3.2rem;
 }
 
+/* === Column ========= */
 /* === Text ========= */
 .font-bai-jamjuree {
     font-family: var(--bs-font-bai-jamjuree);
@@ -357,6 +368,10 @@ a {
 
 .lh-16 {
     line-height: 1.6rem;
+}
+
+.lh-24 {
+    line-height: 2.4rem;
 }
 
 /* === Font Weight ========= */
@@ -385,15 +400,16 @@ a {
     font-size: 1.1rem;
 }
 
+.fs-12 {
+    font-size: 1.2rem;
+}
+
 .fs-14 {
     font-size: 1.4rem;
 }
 
-.fs-12 {
-    font-size: 1.2rem;
-}
-.fs-46 {
-    font-size: 4.6rem;
+.fs-18 {
+    font-size: 1.8rem;
 }
 
 /* === Z-index ========= */
@@ -477,6 +493,10 @@ a {
 }
 
 /* === Top ========= */
+.top-17p {
+    top: 17%;
+}
+
 .top-44p {
     top: 44%;
 }
@@ -596,6 +616,11 @@ a {
     padding-right: 3.2rem;
 }
 
+.px-44 {
+    padding-left: 4.4rem;
+    padding-right: 4.4rem;
+}
+
 /* === Padding Y ========= */
 .py-9 {
     padding-top: 0.9rem;
@@ -616,8 +641,16 @@ a {
     margin-top: 1rem;
 }
 
+.mt-27 {
+    margin-top: 2.7rem;
+}
+
 .mt-30 {
     margin-top: 3rem;
+}
+
+.mt-60 {
+    margin-top: 6rem;
 }
 
 /* === Margin Left ========= */
