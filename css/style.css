@@ -12,12 +12,16 @@ a {
 
 :root {
     --white: #FFFFFF;
+    --black: #000000;
     --light-gray: #F1F5F6;
     --light-blue-gray: #E5E8EC;
     --dark-blue-gray: #515D66;
     --bright-yellow: #FDE50B;
     --light-mint-green: #87f3bd;
-    --dark-blue: #2B38D1;    
+    --dark-green: #008A00;
+    --bright-red: #DC323C;
+    --dark-blue: #2B38D1;
+    --dark-blue-purple: #363b7a;
     --dark-gray: #212529;
     --bs-font-bai-jamjuree: Bai Jamjuree;
     --width-body: auto;
@@ -60,6 +64,14 @@ a {
 
 .color-bright-yellow {
     color: var(--bright-yellow);
+}
+
+.color-bright-red {
+    color: var(--bright-red);
+}
+
+.color-dark-green {
+    color: var(--dark-green);
 }
 
 .color-light-mint-green {
@@ -150,6 +162,10 @@ a {
     border-color: var(--light-blue-gray);
 }
 
+.border-bright-red {
+    border-color: var(--bright-red);
+}
+
 /*=== Rounded =================*/
 .rounded-circle-5 {
     border-radius: 0.5rem;
@@ -229,6 +245,13 @@ a {
     object-position: 100% center;
 }
 
+.img-zoom {
+    transition: transform 0.3s ease-in-out;
+}
+
+.wrapper:hover .img-zoom {
+    transform: scale(1.2);
+}
 
 /* === Height ========= */
 .h-full {
@@ -263,6 +286,41 @@ a {
 
 .w-50 {
     width: 5rem;
+}
+
+/* === Grid ========= */
+.d-grid {
+    display: grid;
+}
+
+/* .grid-1-4 {
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: repeat(1, auto);
+} */
+
+.grid-col-2 {
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 2) - 0.5rem);
+}
+
+.grid-col-1-row-1 {
+    grid-column: 1/2;
+    grid-row: 1;
+}
+
+.grid-col-2-row-1 {
+    grid-column: 2/3;
+    grid-row: 1;
+}
+
+.grid-col-3-row-1 {
+    grid-column: 3/4;
+    grid-row: 1;
+}
+
+.grid-col-4-row-1 {
+    grid-column: 4/5;
+    grid-row: 1;
 }
 
 /* === Display ========= */
@@ -307,6 +365,10 @@ a {
 }
 
 /* === Gap ========= */
+.gap-1 {
+    gap: 0.1rem;
+}
+
 .gap-3 {
     gap: 0.3rem;
 }
@@ -370,6 +432,10 @@ a {
     line-height: 1.6rem;
 }
 
+.lh-18 {
+    line-height: 1.8rem;
+}
+
 .lh-24 {
     line-height: 2.4rem;
 }
@@ -413,6 +479,10 @@ a {
 }
 
 /* === Z-index ========= */
+.z-index-n1 {
+    z-index: -1;
+}
+
 .z-index-2 {
     z-index: 2;
 }
@@ -438,6 +508,26 @@ a {
 .slideshow-wrapper:hover .btn-slideshow-next {
     transform: scale(1) !important;
     opacity: 1;
+}
+
+.btn-icon {
+    color: var(--black);
+    background-color: var(--white);
+}
+
+.btn-cart:hover {
+    background: var(--dark-blue-purple);
+}
+
+.wrapper-btn-cart {
+    opacity: 0;
+    transition: transform, opacity, 0.3s ease-in-out;
+}
+
+.wrapper:hover .wrapper-btn-cart {
+    z-index: 2;
+    opacity: 1;
+    transform: translateY(1.5rem);
 }
 
 /* === Slider ========= */
@@ -507,6 +597,10 @@ a {
     transform: translateX(-50%);
 }
 
+.left-0 {
+    left: 0;
+}
+
 .left-30 {
     left: 3rem;
 }
@@ -519,6 +613,11 @@ a {
 /* === Right ========= */
 .right-30 {
     right: 3rem;
+}
+
+/* === Padding ========= */
+.p-10 {
+    padding: 1rem;
 }
 
 /* === Padding Top ========= */
@@ -584,6 +683,10 @@ a {
     padding-bottom: 1.1rem;
 }
 
+.pb-20 {
+    padding-bottom: 2rem;
+}
+
 .pb-60 {
     padding-bottom: 6rem;
 }
@@ -606,6 +709,11 @@ a {
 }
 
 /* === Padding X ========= */
+.px-14 {
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+}
+
 .px-15 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -632,6 +740,11 @@ a {
     padding-bottom: 1.2rem;
 }
 
+.py-18 {
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+}
+
 /* === Margin Top ========= */
 .mt-5 {
     margin-top: 0.5rem;
@@ -639,6 +752,14 @@ a {
 
 .mt-10 {
     margin-top: 1rem;
+}
+
+.mt-17 {
+    margin-top: 1.7rem;
+}
+
+.mt-16 {
+    margin-top: 1.6rem;
 }
 
 .mt-27 {
@@ -659,15 +780,28 @@ a {
 }
 
 /* === Margin Bottom ========= */
+.mb-9 {
+    margin-bottom: 0.9rem;
+}
+
 .mb-20 {
     margin-bottom: 2rem;
 }
 
 /* === Margin Right ========= */
+.mr-1 {
+    margin-right: 0.1rem;
+}
+
 /* === Margin X ========= */
 .mx-auto {
     margin-left: auto;
     margin-right: auto;
+}
+
+.mx-15 {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
 }
 
 /* === Margin Y ========= */
