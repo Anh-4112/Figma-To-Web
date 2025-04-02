@@ -262,6 +262,10 @@ a {
     height: 0.1rem;
 }
 
+.h-30 {
+    height: 3rem;
+}
+
 .h-50 {
     height: 5rem;
 }
@@ -282,6 +286,10 @@ a {
 
 .w-max-content {
     width: max-content;
+}
+
+.w-30 {
+    width: 3rem;
 }
 
 .w-50 {
@@ -510,24 +518,8 @@ a {
     opacity: 1;
 }
 
-.btn-icon {
-    color: var(--black);
-    background-color: var(--white);
-}
-
 .btn-cart:hover {
     background: var(--dark-blue-purple);
-}
-
-.wrapper-btn-cart {
-    opacity: 0;
-    transition: transform, opacity, 0.3s ease-in-out;
-}
-
-.wrapper:hover .wrapper-btn-cart {
-    z-index: 2;
-    opacity: 1;
-    transform: translateY(1.5rem);
 }
 
 /* === Slider ========= */
@@ -582,7 +574,66 @@ a {
     font-size: var(--fs-slideshow-txt);
 }
 
+/* === Today Offer ========= */
+.icon-cart:hover {
+    background: var(--dark-blue);
+    color: var(--white);
+    border-color: var(--dark-blue);
+}
+
+.wrapper-btn-cart {
+    opacity: 0;
+    transition: transform, opacity, 0.3s ease-in-out;
+}
+
+.wrapper:hover .wrapper-btn-cart {
+    z-index: 2;
+    opacity: 1;
+    transform: translateY(1.5rem);
+}
+
+/*=== Tooltip =================*/
+.tooltip {
+    position: relative;
+}
+
+.tooltiptext {
+    position: absolute;
+    background-color: var(--black);
+    color: var(--white);
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+    opacity: 0;
+}
+
+.tooltiptext-lefr {
+    top: 45%;
+    transform: translateY(-50%);
+    right: 115%;
+}
+
+.tooltiptext::after {
+    content: "";
+    position: absolute;
+    border-width: 0.5rem;
+    border-style: solid;
+}
+
+.tooltiptext-after-left::after {
+    border-color: transparent transparent transparent var(--black);
+    top: 33%;
+    left: 99%;
+}
+
+.tooltip:hover .tooltiptext {
+    opacity: 1;
+}
+
 /* === Top ========= */
+.top-5p {
+    top: 5%;
+}
+
 .top-17p {
     top: 17%;
 }
@@ -611,6 +662,10 @@ a {
 }
 
 /* === Right ========= */
+.right-10p {
+    right: 10%;
+}
+
 .right-30 {
     right: 3rem;
 }
