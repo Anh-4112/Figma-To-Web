@@ -119,13 +119,13 @@
     .h-md-145 {
         height: 14.5rem;
     }
-    
-    .pt-md-14 {
-        padding-top: 1.4rem;
-    }
 
     .p-md-12 {
         padding: 1.2rem;
+    }
+
+    .pt-md-14 {
+        padding-top: 1.4rem;
     }
 
     .pb-md-13 {
@@ -142,9 +142,23 @@
         padding-bottom: 2.3rem;
     }
 
+    .mt-md-7 {
+        margin-top: 0.7rem;
+    }
+
     .mx-md-0 {
         margin-left: 0;
         margin-right: 0;
+    }
+
+    .mx-md-2 {
+        margin-left: 0.2rem;
+        margin-right: 0.2rem;
+    }
+
+    .my-md-0 {
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
 }
@@ -267,6 +281,10 @@
 
     .p-xl-15 {
         padding: 1.5rem;
+    }
+
+    .pb-xl-25 {
+        padding-bottom: 2.5rem;
     }
 
     .pb-xl-18 {

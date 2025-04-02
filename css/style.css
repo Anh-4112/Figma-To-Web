@@ -2,7 +2,7 @@
 html {
     font-size: 62.5%;
     font-family: "Bai Jamjuree", sans-serif;
-    width: 192rem;
+    /* width: 192rem; */
     /* background: orangered; */
 }
 
@@ -824,6 +824,16 @@ a {
 }
 
 /* === Padding X ========= */
+.px-1 {
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+}
+
+.px-10 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 .px-11 {
     padding-left: 1.1rem;
     padding-right: 1.1rem;
@@ -883,12 +893,12 @@ a {
     margin-top: 1.1rem;
 }
 
-.mt-17 {
-    margin-top: 1.7rem;
-}
-
 .mt-16 {
     margin-top: 1.6rem;
+}
+
+.mt-17 {
+    margin-top: 1.7rem;
 }
 
 .mt-20 {
@@ -940,9 +950,8 @@ a {
     margin-right: auto;
 }
 
-.mx-2 {
-    margin-left: 0.2rem;
-    margin-right: 0.2rem;
-}
-
 /* === Margin Y ========= */
+.my-5 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
