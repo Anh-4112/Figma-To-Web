@@ -2,7 +2,7 @@
 html {
     font-size: 62.5%;
     font-family: "Bai Jamjuree", sans-serif;
-    /* width: 192rem; */
+    width: 192rem;
     /* background: orangered; */
 }
 
@@ -38,8 +38,16 @@ a {
     background: var(--white);
 }
 
+.bg-black {
+    background: var(--black);
+}
+
 .bg-light-gray {
     background: var(--light-gray);
+}
+
+.bg-bright-red {
+    background: var(--bright-red);
 }
 
 .bg-light-blue-gray {
@@ -58,9 +66,17 @@ a {
     background: var(--dark-gray);
 }
 
+.bg-light-mint-green {
+    background: var(--light-mint-green);
+}
+
 /* === Color =============== */
 .color-white {
     color: var(--white);
+}
+
+.color-black {
+    color: var(--black);
 }
 
 .color-bright-yellow {
@@ -163,6 +179,10 @@ a {
     border-color: var(--light-blue-gray);
 }
 
+.border-dark-blue {
+    border-color: var(--dark-blue);
+}
+
 .border-bright-red {
     border-color: var(--bright-red);
 }
@@ -263,6 +283,10 @@ a {
     height: 0.1rem;
 }
 
+.h-5 {
+    height: 0.5rem;
+}
+
 .h-30 {
     height: 3rem;
 }
@@ -293,8 +317,16 @@ a {
     width: 3rem;
 }
 
+.w-46 {
+    width: 4.6rem;
+}
+
 .w-50 {
     width: 5rem;
+}
+
+.w-200 {
+    width: 20rem;
 }
 
 /* === Grid ========= */
@@ -378,6 +410,10 @@ a {
     gap: 0.1rem;
 }
 
+.gap-2 {
+    gap: 0.2rem;
+}
+
 .gap-3 {
     gap: 0.3rem;
 }
@@ -389,6 +425,11 @@ a {
 .gap-5 {
     gap: 0.5rem;
 }
+
+.gap-7 {
+    gap: 0.7rem;
+}
+
 
 .gap-9 {
     gap: 0.9rem;
@@ -449,6 +490,10 @@ a {
     line-height: 2.4rem;
 }
 
+.lh-28 {
+    line-height: 2.8rem;
+}
+
 /* === Font Weight ========= */
 .fw-400 {
     font-weight: 400;
@@ -483,8 +528,16 @@ a {
     font-size: 1.4rem;
 }
 
+.fs-16 {
+    font-size: 1.6rem;
+}
+
 .fs-18 {
     font-size: 1.8rem;
+}
+
+.fs-20 {
+    font-size: 2rem;
 }
 
 /* === Z-index ========= */
@@ -633,6 +686,10 @@ a {
 }
 
 /* === Top ========= */
+.top-0 {
+    top: 0;
+}
+
 .top-5p {
     top: 5%;
 }
@@ -767,6 +824,11 @@ a {
 }
 
 /* === Padding X ========= */
+.px-11 {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+}
+
 .px-14 {
     padding-left: 1.4rem;
     padding-right: 1.4rem;
@@ -798,6 +860,11 @@ a {
     padding-bottom: 1.2rem;
 }
 
+.py-13 {
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+}
+
 .py-18 {
     padding-top: 1.8rem;
     padding-bottom: 1.8rem;
@@ -812,12 +879,24 @@ a {
     margin-top: 1rem;
 }
 
+.mt-11 {
+    margin-top: 1.1rem;
+}
+
 .mt-17 {
     margin-top: 1.7rem;
 }
 
 .mt-16 {
     margin-top: 1.6rem;
+}
+
+.mt-20 {
+    margin-top: 2rem;
+}
+
+.mt-22 {
+    margin-top: 2.2rem;
 }
 
 .mt-27 {
@@ -846,6 +925,10 @@ a {
     margin-bottom: 2rem;
 }
 
+.mb-21 {
+    margin-bottom: 2.1rem;
+}
+
 /* === Margin Right ========= */
 .mr-1 {
     margin-right: 0.1rem;
@@ -857,9 +940,9 @@ a {
     margin-right: auto;
 }
 
-.mx-15 {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+.mx-2 {
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
 }
 
 /* === Margin Y ========= */

@@ -316,6 +316,10 @@
     .delay-02s {
         transition-delay: 0.2s;
     }
+
+    .delay-03s {
+        transition-delay: 0.3s;
+    }
 }
 
 /* xxl */
