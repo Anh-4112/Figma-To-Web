@@ -116,6 +116,10 @@ a {
     background: var(--light-mint-green);
 }
 
+.hover-txt-underline:hover {
+    text-decoration: underline;
+}
+
 /* === Cursor ========= */
 .cursor-pointer {
     cursor: pointer;
@@ -397,6 +401,10 @@ a {
     flex-grow: 1;
 }
 
+.flex-31p {
+    flex: 0 0 31%;
+}
+
 .flex-50p {
     flex: 0 0 50%;
 }
@@ -447,11 +455,15 @@ a {
     gap: 1.8rem;
 }
 
+.gap-19 {
+    gap: 1.9rem;
+}
+
 .gap-20 {
     gap: 2rem;
 }
 
-.gap-30 {
+.gap-32 {
     gap: 3.2rem;
 }
 
@@ -461,12 +473,20 @@ a {
     font-family: var(--bs-font-bai-jamjuree);
 }
 
+.txt-center {
+    text-align: center;
+}
+
 .ls-n1 {
     letter-spacing: -0.1rem;
 }
 
 .ls-0 {
     letter-spacing: 0%;
+}
+
+.ls-1 {
+    letter-spacing: 0.1rem;
 }
 
 .va-middle {
@@ -538,6 +558,10 @@ a {
 
 .fs-20 {
     font-size: 2rem;
+}
+
+.fs-30 {
+    font-size: 3rem;
 }
 
 /* === Z-index ========= */
@@ -731,6 +755,10 @@ a {
 }
 
 /* === Padding ========= */
+.p-4 {
+    padding: 0.1rem;
+}
+
 .p-10 {
     padding: 1rem;
 }
@@ -849,6 +877,11 @@ a {
     padding-right: 1.5rem;
 }
 
+.px-19 {
+    padding-left: 1.9rem;
+    padding-right: 1.9rem;
+}
+
 .px-32 {
     padding-left: 3.2rem;
     padding-right: 3.2rem;
@@ -863,6 +896,11 @@ a {
 .py-9 {
     padding-top: 0.9rem;
     padding-bottom: 0.9rem;
+}
+
+.py-10 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .py-12 {
@@ -881,6 +919,10 @@ a {
 }
 
 /* === Margin Top ========= */
+.mt-1 {
+    margin-top: 0.1rem;
+}
+
 .mt-5 {
     margin-top: 0.5rem;
 }
@@ -893,6 +935,10 @@ a {
     margin-top: 1.1rem;
 }
 
+.mt-13 {
+    margin-top: 1.3rem;
+}
+
 .mt-16 {
     margin-top: 1.6rem;
 }
@@ -901,8 +947,17 @@ a {
     margin-top: 1.7rem;
 }
 
+.mt-18 {
+    margin-top: 1.8rem;
+}
+
+
 .mt-20 {
     margin-top: 2rem;
+}
+
+.mt-21 {
+    margin-top: 2.1rem;
 }
 
 .mt-22 {
@@ -915,6 +970,10 @@ a {
 
 .mt-30 {
     margin-top: 3rem;
+}
+
+.mt-58 {
+    margin-top: 5.8rem;
 }
 
 .mt-60 {
@@ -939,6 +998,14 @@ a {
     margin-bottom: 2.1rem;
 }
 
+.mb-40 {
+    margin-bottom: 4rem;
+}
+
+.mb-500 {
+    margin-bottom: 50rem;
+}
+
 /* === Margin Right ========= */
 .mr-1 {
     margin-right: 0.1rem;
@@ -951,6 +1018,11 @@ a {
 }
 
 /* === Margin Y ========= */
+.my-40 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
 .my-5 {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
