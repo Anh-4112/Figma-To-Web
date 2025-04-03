@@ -116,6 +116,10 @@ a {
     background: var(--light-mint-green);
 }
 
+.hover-bg-dark-blue-purple:hover {
+    background: var(--dark-blue-purple);
+}
+
 .hover-txt-underline:hover {
     text-decoration: underline;
 }
@@ -475,6 +479,10 @@ a {
 
 .txt-center {
     text-align: center;
+}
+
+.txt-underline {
+    text-decoration: underline;
 }
 
 .ls-n1 {
