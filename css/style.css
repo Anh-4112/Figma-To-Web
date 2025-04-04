@@ -7,7 +7,6 @@ html {
 }
 
 a {
-    text-decoration: none;
 	color: var(--dark-gray);
 }
 
@@ -122,6 +121,27 @@ a {
 
 .hover-txt-underline:hover {
     text-decoration: underline;
+}
+
+.hover-right-5p {
+    transition: transform 0.2s ease-in-out;
+}
+
+.hover-right-5p:hover {
+    transform: translateX(5%);
+}
+
+.hover-right-25p {
+    transition: transform 0.2s ease-in-out;
+}
+
+.hover-right-25p:hover {
+    transform: translateX(25%);
+}
+
+/* === Shadow ==================== */
+.shadow {
+    box-shadow: 0 0.1rem 1.5rem rgba(0, 0, 0, 0.1);
 }
 
 /* === Cursor ========= */
@@ -337,6 +357,11 @@ a {
     width: 20rem;
 }
 
+.w-750 {
+    width: 75rem;
+}
+
+
 /* === Grid ========= */
 .d-grid {
     display: grid;
@@ -409,6 +434,10 @@ a {
     flex: 0 0 31%;
 }
 
+.flex-33p {
+    flex: 0 0 33.33%;
+}
+
 .flex-50p {
     flex: 0 0 50%;
 }
@@ -455,6 +484,10 @@ a {
     gap: 1.4rem;
 }
 
+.gap-15 {
+    gap: 1.5rem;
+}
+
 .gap-18 {
     gap: 1.8rem;
 }
@@ -471,7 +504,11 @@ a {
     gap: 3.2rem;
 }
 
-/* === Column ========= */
+/* === Opacity ========= */
+.opacity-0 {
+    opacity: 0;
+}
+
 /* === Text ========= */
 .font-bai-jamjuree {
     font-family: var(--bs-font-bai-jamjuree);
@@ -483,6 +520,10 @@ a {
 
 .txt-underline {
     text-decoration: underline;
+}
+
+.txt-nowrap {
+    white-space: nowrap;
 }
 
 .ls-n1 {
@@ -717,6 +758,38 @@ a {
     display: block;
 }
 
+/* === Sub Nav ========= */
+.sub-nav {
+    transition: transform, opacity, 0.2s ease-in-out;
+}
+
+.sub-nav::after {
+    position: absolute;
+    top: -1.5rem;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 1.5rem;
+}
+
+.wrapper:hover .sub-nav {
+    opacity: 1;
+    z-index: 2;
+    transform: translateY(-10%);
+}
+
+/* === Footer List ========= */
+.footer-list {
+    list-style: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.footer-list .footer-list-active {
+    max-height: none;
+}
+
 /* === Top ========= */
 .top-0 {
     top: 0;
@@ -734,6 +807,14 @@ a {
     top: 44%;
 }
 
+.top-300p {
+    top: 300%;
+}
+
+.top-430p {
+    top: 430%;
+}
+
 /* === Left ========= */
 .left-center {
     left: 50%;
@@ -748,18 +829,26 @@ a {
     left: 3rem;
 }
 
+.left-n171p {
+    left: -171%;
+}
+
 /* === Bottom ========= */
 .bottom-10 {
     bottom: 1rem;
 }
 
 /* === Right ========= */
-.right-10p {
-    right: 10%;
+.right-0 {
+    right: 0;
 }
 
 .right-30 {
     right: 3rem;
+}
+
+.right-10p {
+    right: 10%;
 }
 
 /* === Padding ========= */
@@ -821,8 +910,16 @@ a {
     padding-left: 2.3rem;
 }
 
+.pl-25 {
+    padding-left: 2.5rem;
+}
+
 .pl-26 {
     padding-left: 2.6rem;
+}
+
+.pl-30 {
+    padding-left: 3rem;
 }
 
 /* === Padding Bottom ========= */
@@ -857,6 +954,22 @@ a {
 
 .pr-30 {
     padding-right: 3rem;
+}
+
+.pr-55 {
+    padding-right: 5.5rem;
+}
+
+.pr-85 {
+    padding-right: 8.5rem;
+}
+
+.pr-100 {
+    padding-right: 10rem;
+}
+
+.pr-150 {
+    padding-right: 15rem;
 }
 
 /* === Padding X ========= */
@@ -924,6 +1037,11 @@ a {
 .py-18 {
     padding-top: 1.8rem;
     padding-bottom: 1.8rem;
+}
+
+.py-30 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 /* === Margin Top ========= */
@@ -1017,6 +1135,10 @@ a {
 /* === Margin Right ========= */
 .mr-1 {
     margin-right: 0.1rem;
+}
+
+.mr-30 {
+    margin-right: 3rem;
 }
 
 /* === Margin X ========= */

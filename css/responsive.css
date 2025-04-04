@@ -63,6 +63,15 @@
         grid-template-rows: repeat(2, auto);
     } */
 
+    .footer-list-md {
+        max-height: none;
+        overflow: visible;
+    }
+
+    .pe-md-none {
+        pointer-events: none; /* Vô hiệu hóa click */
+    }
+
     .grid-col-md-1 {
         grid-auto-flow: column;
         grid-auto-columns: calc(100% - 0.5rem);
@@ -90,6 +99,10 @@
     
     .d-md-block {
         display: block;
+    }
+
+    .d-md-none {
+        display: none;
     }
     
     .flex-md-row {

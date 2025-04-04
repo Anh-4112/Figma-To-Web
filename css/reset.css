@@ -1,17 +1,27 @@
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+/* Structural Elements */
+html, body, div, span,
+article, aside, header, footer, section, hgroup,
+main, summary, details, figure, figcaption, center,
+/* Headings & Text Elements */
+h1, h2, h3, h4, h5, h6,
+abbr, acronym, q, s, strike, sub, sup,
+p, blockquote, pre,
+address, cite, code,
+del, ins, dfn, kbd, samp, var,
+b, u, i, strong, em, small, big, tt,
+/* Lists */
+ul, ol, li, dl, dt, dd,
+/* Links & Navigation */
+a, nav, menu,
+/* Tables */
+table, caption, thead, tbody, tfoot, tr, th, td,
+/* Forms */
+form, input, label, fieldset,
+legend, button, select, option, textarea,
+/* Embedded Elements */
+img, audio, video, canvas, embed, iframe, object, applet,
+/* Special Elements */
+mark, time, output, ruby {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -20,30 +30,49 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+/* Thiết lập các phần tử có display-block */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
+/* Thiết lập khoảng cách dòng cho toàn bộ trang */
 body {
 	line-height: 1;
 }
 
+
+/* Loại bỏ kiểu danh sách mặc định */
 ol, ul {
 	list-style: none;
 }
 
+/* Loại bỏ dấu trích dẫn mặc định */
 blockquote, q {
 	quotes: none;
 }
 
+/* Loại bỏ nội dung giả lập */
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
 
+/* Thiết lập bảng không có khoảng cách giữa các ô */
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* Loại bỏ đường gạch dưới */
+a {
+    text-decoration: none;
+}
+
+/* Loại bỏ kiểu button mặc định */
+/* button {
+  background: none;
+  border: none;
+  font: inherit;
+} */
