@@ -242,7 +242,7 @@ document.addEventListener("DOMContentLoaded", function () {
     addToCartButtons.forEach(button => {
         button.addEventListener("click", () => {
             // Lấy phần tử chứa thông tin sản phẩm đang click
-            const productBlock = button.closest(".wrapper-items");
+            const productBlock = button.closest(".wrapper");
             if (!productBlock) return;
 
             // Lấy thông tin hình ảnh, tên và giá từ các phần tử con
