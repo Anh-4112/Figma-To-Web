@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const cartTotal = document.querySelectorAll(".cart-total");
     const addToCartButtons = document.querySelectorAll(".add-to-cart");
     const cartItemTemplate = document.getElementById("cartItem");
-    // const cartCount = document.getElementById("cartCount");
+    const cartCount = document.getElementById("cartCount");
 
     // Lấy giỏ hàng từ localStorage (nếu có) hoặc khởi tạo mảng trống
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -264,19 +264,6 @@ document.addEventListener("DOMContentLoaded", function () {
             addToCart(id, name, price, image);
         });
     });
-    
-
-    // function addToCart(id, name, price, image) {
-    //     const existingItem = cart.find(item => item.id === id);
-    //     if (existingItem) {
-    //         existingItem.quantity++;
-    //     } else {
-    //         cart.push({ id, name, price, image, quantity: 1 });
-    //     }
-    //     saveCart();
-    //     renderCart();
-    //     toggleCart(true); // Mở giỏ hàng sau khi thêm sản phẩm
-    // }
 
     function addToCart(id, name, price, image) {
         const existingItem = cart.find(item => item.id === id);
@@ -362,17 +349,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Hàm cập nhật số lượng sản phẩm trong giỏ hàng hiển thị trên icon giỏ hàng
     function updateCartCount() {
-    // Lấy phần tử DOM hiển thị số lượng sản phẩm trên icon (phần tử có id là "cartCount")
-    const cartCountElement = document.getElementById("cartCount");
+        // Lấy phần tử DOM hiển thị số lượng sản phẩm trên icon (phần tử có id là "cartCount")
+        const cartCount = document.getElementById("cartCount");
 
-    // Tính tổng số lượng sản phẩm trong giỏ hàng bằng cách cộng dồn quantity của từng item
-    const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+        // Tính tổng số lượng sản phẩm trong giỏ hàng bằng cách cộng dồn quantity của từng item
+        const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
 
-    // Nếu phần tử hiển thị tồn tại thì cập nhật nội dung số lượng vào đó
-    if (cartCountElement) {
-        cartCountElement.innerText = totalQuantity;
+        // Nếu phần tử hiển thị tồn tại thì cập nhật nội dung số lượng vào đó
+        if (cartCount) {
+            cartCount.innerText = totalQuantity;
+        }
     }
-}
 
 
     // Hiển thị lại giỏ hàng khi trang tải lại
