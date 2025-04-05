@@ -384,8 +384,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Mở submenu
     document.querySelectorAll(".btn-sub-nav").forEach(btn => {
-        btn.addEventListener("click", () => {
-            const submenu = btn.nextElementSibling;
+        btn.addEventListener("click", function() {
+            const submenu = this.nextElementSibling;
             if (submenu && submenu.classList.contains("sub-nav-mobile")) {
                 closeAllSubmenus();
                 submenu.classList.add("open");
@@ -395,8 +395,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Back submenu
     document.querySelectorAll(".back-sub-nav").forEach(btn => {
-        btn.addEventListener("click", () => {
-            btn.closest(".sub-nav-mobile")?.classList.remove("open");
+        btn.addEventListener("click", function() {
+            this.closest(".sub-nav-mobile")?.classList.remove("open");
         });
     });
 
