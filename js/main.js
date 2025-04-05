@@ -360,3 +360,55 @@ document.addEventListener("DOMContentLoaded", function () {
     renderCart(); // Hiển thị giỏ khi load lại
     updateCartCount(); // Cập nhật icon
 });
+
+// =============================================================================
+// ==============================    MENU MOBILE    ============================
+// =============================================================================
+document.addEventListener("DOMContentLoaded", function () {
+    const menuMobileIcon = document.getElementById("menuMobileIcon");
+    const menuMobileBlock = document.getElementById("menuMobileBlock");
+    const closeMenuMobile = document.getElementById("closeMenuMobile");
+    const overlayMobile = document.getElementById("overlayMobile");
+
+    // Mở menu mobile
+    menuMobileIcon.addEventListener("click", () => toggleMobile(true));
+    window.toggleMobile = function (isOpen) {
+        menuMobileBlock.classList.toggle("open", isOpen);
+        overlayMobile.classList.toggle("show", isOpen);
+        if (!isOpen) closeAllSubmenus();
+    };
+
+    const closeMobile = () => toggleMobile(false);
+    closeMenuMobile?.addEventListener("click", closeMobile);
+    overlayMobile?.addEventListener("click", closeMobile);
+
+    // Mở submenu
+    document.querySelectorAll(".btn-sub-nav").forEach(btn => {
+        btn.addEventListener("click", () => {
+            const submenu = btn.nextElementSibling;
+            if (submenu && submenu.classList.contains("sub-nav-mobile")) {
+                closeAllSubmenus();
+                submenu.classList.add("open");
+            }
+        });
+    });
+
+    // Back submenu
+    document.querySelectorAll(".back-sub-nav").forEach(btn => {
+        btn.addEventListener("click", () => {
+            btn.closest(".sub-nav-mobile")?.classList.remove("open");
+        });
+    });
+
+    // Close submenu (X)
+    document.querySelectorAll(".close-sub-nav").forEach(btn => {
+        btn.addEventListener("click", closeMobile);
+    });
+
+    // Đóng tất cả submenus
+    function closeAllSubmenus() {
+        document.querySelectorAll(".sub-nav-mobile.open").forEach(el => {
+            el.classList.remove("open");
+        });
+    }
+});
