@@ -118,23 +118,19 @@
     }
 
     .flex-md-30p {
-        flex: 0 0 30%;
+        flex: 0 0 29%;
     }
 
     .flex-md-50p {
         flex: 0 0 50%;
     }
 
-    .flex-md-40p-gap-5 {
-        flex: 0 0 calc(40% - 1rem);
+    .flex-md-40p {
+        flex: 0 0 calc(40%);
     }
 
     .justify-md-between {
         justify-content: space-between;
-    }
-
-    .justify-md-end {
-        justify-content: end;
     }
 
     .h-md-145 {
@@ -161,6 +157,10 @@
 
     .mt-md-7 {
         margin-top: 0.7rem;
+    }
+
+    .ml-md-5 {
+        margin-left: 0.5rem;
     }
 
     .mx-md-0 {
@@ -193,6 +193,10 @@
     .grid-col-lg-2 {
         grid-auto-flow: column;
         grid-auto-columns: calc((100% /2) - 0.5rem);
+    }
+
+    .d-lg-none {
+        display: none;
     }
     
     .order-lg-0 {
@@ -273,6 +277,10 @@
 
     .pb-lg-25 {
         padding-bottom: 2.5rem;
+    }
+
+    .pb-lg-30 {
+        padding-bottom: 3rem;
     }
 
     .py-lg-2 {

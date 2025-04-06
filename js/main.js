@@ -166,6 +166,89 @@ document.addEventListener("DOMContentLoaded", () => {
     goToSlide(currentIndex, false);
 });
 
+// =============================================================================
+// ==============================    SLIDER OFFER    ===========================
+// =============================================================================
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".wrapper-slider-offer").forEach(wrapper => {
+        const carousel = wrapper.querySelector(".slider-offer");
+        const btnPrev = wrapper.querySelector(".btn-offer-prev");
+        const btnNext = wrapper.querySelector(".btn-offer-next");
+        const firstCard = carousel.querySelector(".card-offer");
+
+        let firstCardWidth = firstCard ? firstCard.offsetWidth : 0;
+        let gap = parseInt(getComputedStyle(carousel).gap) || 0;
+        let isDragging = false, startX, startScrollLeft, moved = false;
+
+        const updateSizes = () => {
+            firstCardWidth = firstCard ? firstCard.offsetWidth : 0;
+            gap = parseInt(getComputedStyle(carousel).gap) || 0;
+        };
+        window.addEventListener("resize", updateSizes);
+
+        // Ngăn kéo link
+        wrapper.querySelectorAll("a").forEach(a => {
+            a.addEventListener("click", (e) => { if (moved) e.preventDefault(); });
+            a.addEventListener("dragstart", (e) => e.preventDefault());
+        });
+
+        const dragStart = (e) => {
+            isDragging = true;
+            moved = false;
+            startX = e.pageX || e.touches[0].pageX;
+            startScrollLeft = carousel.scrollLeft;
+            carousel.classList.add("dragging");
+        };
+
+        const dragging = (e) => {
+            if (!isDragging) return;
+            moved = true;
+            const x = e.pageX || e.touches[0].pageX;
+            carousel.scrollLeft = startScrollLeft - (x - startX);
+        };
+
+        const dragStop = () => {
+            isDragging = false;
+            carousel.classList.remove("dragging");
+            if (moved) {
+                const cardWidthWithGap = firstCardWidth + gap;
+                const scrollLeft = carousel.scrollLeft;
+                const closestIndex = Math.round(scrollLeft / cardWidthWithGap);
+                const newScrollPosition = closestIndex * cardWidthWithGap;
+                carousel.style.scrollBehavior = "smooth";
+                carousel.scrollTo({ left: newScrollPosition, behavior: "smooth" });
+                setTimeout(() => carousel.style.scrollBehavior = "auto", 500);
+            }
+        };
+
+        const scrollToItem = (direction) => {
+            const scrollLeft = carousel.scrollLeft;
+            const cardWidthWithGap = firstCardWidth + gap;
+            const currentIndex = Math.round(scrollLeft / cardWidthWithGap);
+            const newIndex = direction === "prev"
+                ? Math.max(0, currentIndex - 1)
+                : Math.min(Math.ceil(carousel.scrollWidth / cardWidthWithGap), currentIndex + 1);
+
+            const newScrollPosition = newIndex * cardWidthWithGap;
+            carousel.style.scrollBehavior = "smooth";
+            carousel.scrollTo({ left: newScrollPosition, behavior: "smooth" });
+            setTimeout(() => carousel.style.scrollBehavior = "auto", 500);
+        };
+
+        btnPrev.addEventListener("click", () => scrollToItem("prev"));
+        btnNext.addEventListener("click", () => scrollToItem("next"));
+
+        // Gán sự kiện kéo chuột/cảm ứng
+        carousel.addEventListener("mousedown", dragStart);
+        carousel.addEventListener("mousemove", dragging);
+        document.addEventListener("mouseup", dragStop);
+        carousel.addEventListener("mouseleave", dragStop);
+        carousel.addEventListener("touchstart", dragStart);
+        carousel.addEventListener("touchmove", dragging);
+        carousel.addEventListener("touchend", dragStop);
+    });
+});
+
 
 // =============================================================================
 // ==============================    LIST FOOTER    ============================

@@ -11,7 +11,7 @@ a {
 }
 
 :root {
-    --white: #FFFFFF;
+    --white: #ffffff;
     --black: #000000;
     --light-gray: #F1F5F6;
     --light-blue-gray: #E5E8EC;
@@ -154,7 +154,7 @@ a {
     overflow: hidden;
 }
 
-.overflow-y {
+.overflow-x {
     overflow-x: auto;
 }
 
@@ -342,6 +342,10 @@ a {
     height: 3rem;
 }
 
+.h-40 {
+    height: 4rem;
+}
+
 .h-50 {
     height: 5rem;
 }
@@ -374,6 +378,10 @@ a {
 
 .w-30 {
     width: 3rem;
+}
+
+.w-40 {
+    width: 4rem;
 }
 
 .w-46 {
@@ -569,6 +577,13 @@ a {
     white-space: nowrap;
 }
 
+.txt-no-select {
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE/Edge */
+}
+
 .ls-n1 {
     letter-spacing: -0.1rem;
 }
@@ -687,9 +702,8 @@ a {
     background: rgba(255, 255, 255, 0.2);
     color: var(--white);
     user-select: none;
-    transform: scale(0.1) !important;
-    opacity: 0;
-    transition: transform, opacity, 0.3s ease-out;
+    transform: scale(0) !important;
+    transition: transform 0.3s ease-out;
 }
 
 .btn-slideshow-prev:hover,
@@ -701,11 +715,21 @@ a {
 .slideshow-wrapper:hover .btn-slideshow-prev,
 .slideshow-wrapper:hover .btn-slideshow-next {
     transform: scale(1) !important;
-    opacity: 1;
 }
 
 .btn-cart:hover {
     background: var(--dark-blue-purple);
+}
+
+.btn-offer-prev,
+.btn-offer-next {
+    background: rgba(89, 84, 242, 0.517);
+    color: var(--white);
+}
+
+.btn-offer-prev:hover,
+.btn-offer-next:hover {
+    background: var(--dark-blue);
 }
 
 /* === Slider ========= */
@@ -919,12 +943,10 @@ a {
 .go-to-top {
     transform: scale(0);
     transition: transform 0.3s ease-out;
-    pointer-events: none;
 }
 
 .go-to-top.show {
     transform: scale(1);
-    pointer-events: auto;
 }
 
 /* === Top ========= */
@@ -948,6 +970,10 @@ a {
     top: 44%;
 }
 
+.top-47p {
+    top: 47%;
+}
+
 .top-300p {
     top: 300%;
 }
@@ -960,6 +986,10 @@ a {
 .left-center {
     left: 50%;
     transform: translateX(-50%);
+}
+
+.left-n14 {
+    left: -1.4rem;
 }
 
 .left-0 {
@@ -984,6 +1014,10 @@ a {
 }
 
 /* === Right ========= */
+.right-n14 {
+    right: -1.4rem;
+}
+
 .right-0 {
     right: 0;
 }
