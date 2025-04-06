@@ -412,3 +412,32 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+// =============================================================================
+// ==============================    GO TO TOP    ==============================
+// =============================================================================
+document.addEventListener("DOMContentLoaded", function () {
+    const goToTopButton = document.querySelector(".go-to-top");
+
+    function toggleGoToTop() {
+        if (window.scrollY > 100) {
+            goToTopButton.classList.add("show");
+        } else {
+            goToTopButton.classList.remove("show");
+        }
+    }
+
+    // Kiểm tra khi trang load
+    toggleGoToTop();
+
+    // Lắng nghe sự kiện cuộn
+    window.addEventListener("scroll", toggleGoToTop);
+
+    // Cuộn lên đầu khi click
+    goToTopButton.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+});

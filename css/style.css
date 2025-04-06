@@ -665,6 +665,10 @@ a {
     z-index: 2;
 }
 
+.z-index-50 {
+    z-index: 50;
+}
+
 .z-index-99 {
     z-index: 99;
 }
@@ -846,7 +850,8 @@ a {
 }
 
 /* === Focus ========= */
-.border-light-blue-gray:focus-within {
+.wrapper-input-newsletter:focus-within,
+.wrapper-input-search:focus-within {
     border-color: var(--dark-blue);
 }
 
@@ -910,6 +915,18 @@ a {
     transform: translateX(0);
 }
 
+/* === Go To Top ========= */
+.go-to-top {
+    transform: scale(0);
+    transition: transform 0.3s ease-out;
+    pointer-events: none;
+}
+
+.go-to-top.show {
+    transform: scale(1);
+    pointer-events: auto;
+}
+
 /* === Top ========= */
 .top-0 {
     top: 0;
@@ -962,9 +979,17 @@ a {
     bottom: 1rem;
 }
 
+.bottom-90 {
+    bottom: 9rem;
+}
+
 /* === Right ========= */
 .right-0 {
     right: 0;
+}
+
+.right-15 {
+    right: 1.5rem;
 }
 
 .right-30 {
