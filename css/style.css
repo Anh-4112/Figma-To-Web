@@ -1051,6 +1051,10 @@ a {
     padding: 1rem;
 }
 
+.p-30 {
+    padding: 3rem;
+}
+
 /* === Padding Top ========= */
 .pt-1 {
     padding-top: 0.1rem;
@@ -1095,6 +1099,10 @@ a {
 
 .pl-5 {
     padding-left: 0.5rem;
+}
+
+.pl-7 {
+    padding-left: 0.7rem;
 }
 
 .pl-20 {
@@ -1172,29 +1180,19 @@ a {
 }
 
 /* === Padding X ========= */
-.px-1 {
-    padding-left: 0.1rem;
-    padding-right: 0.1rem;
-}
-
 .px-5 {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
 
-.px-10 {
-    padding-left: 1rem;
-    padding-right: 1rem;
+.px-6 {
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
 }
 
-.px-11 {
-    padding-left: 1.1rem;
-    padding-right: 1.1rem;
-}
-
-.px-14 {
-    padding-left: 1.4rem;
-    padding-right: 1.4rem;
+.px-7 {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
 }
 
 .px-15 {
@@ -1228,6 +1226,11 @@ a {
     padding-bottom: 0.2rem;
 }
 
+.py-6 {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+}
+
 .py-9 {
     padding-top: 0.9rem;
     padding-bottom: 0.9rem;
@@ -1241,11 +1244,6 @@ a {
 .py-12 {
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
-}
-
-.py-13 {
-    padding-top: 1.3rem;
-    padding-bottom: 1.3rem;
 }
 
 .py-18 {
@@ -1272,6 +1270,10 @@ a {
     margin-top: 0.5rem;
 }
 
+.mt-7 {
+    margin-top: 0.7rem;
+}
+
 .mt-10 {
     margin-top: 1rem;
 }
@@ -1282,6 +1284,10 @@ a {
 
 .mt-13 {
     margin-top: 1.3rem;
+}
+
+.mt-15 {
+    margin-top: 1.5rem;
 }
 
 .mt-16 {
@@ -1333,6 +1339,10 @@ a {
 /* === Margin Bottom ========= */
 .mb-9 {
     margin-bottom: 0.9rem;
+}
+
+.mb-18 {
+    margin-bottom: 1.8rem;
 }
 
 .mb-20 {

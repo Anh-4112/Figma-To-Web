@@ -249,6 +249,90 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.querySelector(".slider-offer-center");
+    const cards = carousel?.querySelectorAll(".card-offer-center");
+
+    if (!carousel || cards.length === 0) return;
+
+    carousel.style.scrollBehavior = "smooth";
+    carousel.style.overflowX = "auto";
+    carousel.style.webkitOverflowScrolling = "touch";
+    carousel.style.overflow = "auto";
+    carousel.style.scrollbarWidth = "none";
+    carousel.style.msOverflowStyle = "none";
+
+
+    let isDragging = false;
+    let startX = 0;
+    let scrollStart = 0;
+    let moved = false;
+
+    const getCardWidthWithGap = () => {
+        const card = cards[0];
+        const style = window.getComputedStyle(carousel);
+        const gap = parseInt(style.gap) || 0;
+        return card.offsetWidth + gap;
+    };
+
+    const snapToCard = () => {
+        const scrollLeft = carousel.scrollLeft;
+        const cardWidthWithGap = getCardWidthWithGap();
+        const index = Math.round(scrollLeft / cardWidthWithGap);
+        const snapPosition = index * cardWidthWithGap;
+
+        carousel.style.scrollBehavior = "smooth";
+        carousel.scrollTo({ left: snapPosition });
+
+        setTimeout(() => {
+            carousel.style.scrollBehavior = "auto";
+        }, 400);
+    };
+
+    // Start drag
+    const dragStart = (e) => {
+        isDragging = true;
+        moved = false;
+        startX = e.pageX || e.touches[0].pageX;
+        scrollStart = carousel.scrollLeft;
+        carousel.classList.add("dragging");
+    };
+
+    // Drag move
+    const dragMove = (e) => {
+        if (!isDragging) return;
+        moved = true;
+        const x = e.pageX || e.touches[0].pageX;
+        const delta = x - startX;
+        carousel.scrollLeft = scrollStart - delta;
+    };
+
+    // End drag
+    const dragEnd = () => {
+        if (!isDragging) return;
+        isDragging = false;
+        carousel.classList.remove("dragging");
+        if (moved) snapToCard();
+    };
+
+    // Ngăn click khi đang kéo
+    carousel.querySelectorAll("a").forEach(a => {
+        a.addEventListener("click", (e) => {
+            if (moved) e.preventDefault();
+        });
+        a.addEventListener("dragstart", (e) => e.preventDefault());
+    });
+
+    // Mouse Events
+    carousel.addEventListener("mousedown", dragStart);
+    document.addEventListener("mousemove", dragMove);
+    document.addEventListener("mouseup", dragEnd);
+
+    // Touch Events
+    carousel.addEventListener("touchstart", dragStart);
+    carousel.addEventListener("touchmove", dragMove);
+    carousel.addEventListener("touchend", dragEnd);
+});
 
 // =============================================================================
 // ==============================    LIST FOOTER    ============================
