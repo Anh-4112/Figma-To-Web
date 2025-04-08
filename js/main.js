@@ -374,25 +374,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const dragEnd = () => {
         if (!isDragging) return;
         isDragging = false;
-
-        // Tính lại slide gần nhất
-        const scrollPos = carousel.scrollLeft;
-        let total = 0;
-        let index = 0;
-        for (let i = 0; i < cards.length; i++) {
-            const style = window.getComputedStyle(cards[i]);
-            const width = cards[i].offsetWidth + (parseInt(style.marginRight) || 0);
-            if (scrollPos < total + width / 2) {
-                index = i;
-                break;
-            }
-            total += width;
+    
+        const endX = startX; // vị trí bắt đầu đã lưu từ trước
+        const currentX = event.pageX || (event.changedTouches ? event.changedTouches[0].pageX : 0);
+        const deltaX = currentX - startX;
+    
+        const card = cards[currentIndex];
+        const style = window.getComputedStyle(card);
+        const cardWidth = card.offsetWidth + (parseInt(style.marginRight) || 0);
+    
+        // Nếu kéo sang trái nhiều (delta âm), sang phải nhiều (delta dương)
+        if (deltaX > cardWidth * 0.1) {
+            // Kéo sang phải => về slide trước
+            currentIndex--;
+        } else if (deltaX < -cardWidth * 0.1) {
+            // Kéo sang trái => tới slide sau
+            currentIndex++;
         }
-
-        currentIndex = index;
+        
         scrollToIndex(currentIndex);
-
-        // Nếu kéo về slide clone => reset về slide thật
+    
+        // Xử lý khi rơi vào vùng clone
         setTimeout(() => {
             if (currentIndex <= 1) {
                 currentIndex = cards.length - 4;
@@ -402,9 +404,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 scrollToIndex(currentIndex, false);
             }
         }, 400);
-
+    
         restartAutoSlide();
-    };
+    };    
 
     // === 9. Ngăn click khi đang kéo ===
     carousel.querySelectorAll("a").forEach(a => {
