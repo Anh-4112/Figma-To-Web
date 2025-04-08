@@ -2,173 +2,148 @@
 // ==============================    SLIDESHOW    ==============================
 // =============================================================================
 document.addEventListener("DOMContentLoaded", () => {
-    const slideshow = document.querySelector(".slideshow");
-    const slideshowDots = document.querySelector(".slideshow-dots");
-    const btnSlideshowPrev = document.querySelector(".btn-slideshow-prev");
-    const btnSlideshowNext = document.querySelector(".btn-slideshow-next");
-    if (!slideshow) return; // Nếu không tìm thấy slideshow, thoát sớm
+    const slideShow = document.querySelector(".slideshow");
+    const cards = Array.from(slideShow.querySelectorAll(".slide"));
+    const btnPrev = document.querySelector(".btn-slideshow-prev");
+    const btnNext = document.querySelector(".btn-slideshow-next");
+    const dotsContainer = document.querySelector(".slideshow-dots");
 
-    // Tạo 1 mảng có chứa các phần tử là slide của slideshow
-    const slides = Array.from(slideshow.querySelectorAll(".slide"));
-    if (slides.length === 0) return; // Nếu không có slide nào, thoát sớm
+    if (!slideShow || cards.length === 0) return;
 
-    // Lấy chiều rộng của một slide để tính toán vị trí di chuyển
-    let slideWidth = slides[0].offsetWidth;
-    
-    // Biến kiểm soát trạng thái kéo slide
-    let isDragging = false, // Đang kéo hay không
-        startX = 0, // Vị trí bắt đầu kéo (trục X)
-        deltaX = 0, // Khoảng cách kéo (trục X)
-        currentIndex = 0; // Chỉ mục slide hiện tại
+    // === Thiết lập style cho slideshow và slide ===
+    slideShow.style.overflowX = "hidden";
+    slideShow.style.scrollBehavior = "smooth";
+    slideShow.style.scrollSnapType = "none";
+    cards.forEach(card => card.style.flexShrink = "0");
 
-    // Biến kiểm soát ngăn chặn click
-    let clickPrevented = false;
+    // === Khai báo chỉ số slide ===
+    let currentIndex = 0;
 
-    // Tạo dots tự động theo số lượng slides
-    slides.forEach((_, i) => {
-        const dot = document.createElement("span"); // Tạo phần tử dot
-        dot.classList.add("dot"); // Thêm class "dot" để tạo kiểu
-        dot.dataset.index = i; // Gán chỉ số slide tương ứng cho dot
-        slideshowDots.appendChild(dot); // Thêm dot vào container
-    });
-    
-    // Lấy danh sách các dots vừa tạo
-    const dots = Array.from(slideshowDots.querySelectorAll(".dot"));
-
-    // Hàm cập nhật trạng thái active cho dot tương ứng với slide hiện tại
-    const updateActiveDot = () => {
-        dots.forEach(dot => dot.classList.remove("active")); // Xóa class active khỏi tất cả dots
-        dots[currentIndex].classList.add("active"); // Thêm class active vào dot của slide hiện tại
+    // === Tính vị trí cuộn theo index ===
+    const getScrollPositionForIndex = (index) => {
+        return cards[index].offsetLeft - slideShow.offsetLeft;
     };
-    
-    // Cập nhật kích thước slide khi thay đổi kích thước cửa sổ
-    const updateSizes = () => {
-        slideWidth = slides[0].offsetWidth; // Lấy lại chiều rộng slide mới
-        goToSlide(currentIndex, false); // Căn chỉnh lại vị trí slide hiện tại
-    };
-    window.addEventListener("resize", updateSizes);
 
-    // Ngăn chặn kéo link khi đang kéo slide
-    slideshow.addEventListener("mousedown", (e) => {
-        isDragging = false;
-        clickPrevented = false; // Reset trạng thái chặn click
-        startX = e.pageX;
-        deltaX = 0;
-        e.preventDefault(); // Chặn hành vi mặc định của trình duyệt
-    });
-
-    slideshow.addEventListener("mousemove", (e) => {
-        if (e.buttons !== 1) return; // Kiểm tra có giữ chuột không
-        isDragging = true;
-        const x = e.pageX;
-        deltaX = x - startX;
-    });
-
-    slideshow.addEventListener("mouseup", () => {
-        if (isDragging) {
-            clickPrevented = true;
-        }
-        setTimeout(() => {
-            clickPrevented = false;
-        }, 100);
-    });
-
-    // Chặn click vào link nếu vừa kéo
-    slideshow.querySelectorAll("a").forEach(a => {
-        a.addEventListener("click", (e) => {
-            if (clickPrevented) {
-                e.preventDefault();
-                e.stopImmediatePropagation();
-            } else {
-                window.location.href = a.href; // Điều hướng trang nếu không bị chặn
-            }
+    // === Scroll đến slide theo index ===
+    const scrollToIndex = (index) => {
+        currentIndex = Math.max(0, Math.min(index, cards.length - 1));
+        slideShow.scrollTo({
+            left: getScrollPositionForIndex(currentIndex),
+            behavior: "smooth"
         });
-    });
-    
-    // Hàm di chuyển đến slide nhất định
-    const goToSlide = (index, smooth = true) => {
-        if (!slideshow) return;
-        slideshow.style.transition = smooth ? "" : "none";
-        slideshow.style.transform = `translateX(${-index * 100}%)`;
-        currentIndex = index;
-        updateActiveDot();
+        updateDots();
     };
 
-    // Bắt đầu kéo slide
+    // === Tạo dots ===
+    const createDots = () => {
+        if (!dotsContainer) return;
+        dotsContainer.innerHTML = "";
+        cards.forEach((_, index) => {
+            const dot = document.createElement("button");
+            dot.classList.add("dot");
+            if (index === currentIndex) dot.classList.add("active");
+            dot.addEventListener("click", () => scrollToIndex(index));
+            dotsContainer.appendChild(dot);
+        });
+    };
+
+    const updateDots = () => {
+        if (!dotsContainer) return;
+        const dots = dotsContainer.querySelectorAll(".dot");
+        dots.forEach((dot, index) => {
+            dot.classList.toggle("active", index === currentIndex);
+        });
+    };    
+
+    createDots();
+
+    // === Kéo tay bằng chuột hoặc cảm ứng ===
+    let isDragging = false;
+    let startX = 0;
+    let scrollStart = 0;
+    let moved = false;
+
     const dragStart = (e) => {
         isDragging = true;
-        startX = e.touches ? e.touches[0].pageX : e.pageX;
-        deltaX = 0;
-        slideshow.style.transition = "none";
+        moved = false;
+        startX = e.pageX || e.touches[0].pageX;
+        scrollStart = slideShow.scrollLeft;
     };
 
-    // Xử lý khi đang kéo
-    const dragging = (e) => {
+    const dragMove = (e) => {
         if (!isDragging) return;
-        
-        let x = e.touches ? e.touches[0].pageX : e.pageX;
-        deltaX = x - startX;
-        
-        // Ngăn trình duyệt cuộn trang khi kéo slide
-        e.preventDefault();
-    
-        const percentage = (-currentIndex * 100) + (deltaX / slideWidth) * 100;
-        slideshow.style.transform = `translateX(${percentage}%)`;
+        moved = true;
+        const x = e.pageX || e.touches[0].pageX;
+        const delta = x - startX;
+        slideShow.scrollLeft = scrollStart - delta;
     };
 
-    // Dừng kéo và xác định slide nào cần hiển thị
-    const dragStop = () => {
+    const dragEnd = (e) => {
         if (!isDragging) return;
         isDragging = false;
-    
-        const threshold = slideWidth * 0.1; // Nếu kéo quá 10% thì chuyển slide
-        if (Math.abs(deltaX) > threshold) {
-            currentIndex = deltaX < 0
-                ? Math.min(currentIndex + 1, slides.length - 1)
-                : Math.max(currentIndex - 1, 0);
+
+        const currentX = e.pageX || (e.changedTouches ? e.changedTouches[0].pageX : 0);
+        const deltaX = currentX - startX;
+
+        const card = cards[currentIndex];
+        const style = window.getComputedStyle(card);
+        const cardWidth = card.offsetWidth + (parseInt(style.marginRight) || 0);
+
+        if (deltaX > cardWidth * 0.1) {
+            scrollToIndex(currentIndex - 1);
+        } else if (deltaX < -cardWidth * 0.05) {
+            scrollToIndex(currentIndex + 1);
+        } else {
+            scrollToIndex(currentIndex); // snap lại nếu kéo ít
         }
-    
-        goToSlide(currentIndex, true);
     };
 
-    // Lắng nghe sự kiện chuột
-    slideshow.addEventListener("mousedown", dragStart);
-    document.addEventListener("mousemove", dragging);
-    document.addEventListener("mouseup", dragStop);
-    slideshow.addEventListener("mouseleave", dragStop);
-
-    // Lắng nghe sự kiện cảm ứng trên màn hình
-    slideshow.addEventListener("touchstart", dragStart, { passive: false });
-    slideshow.addEventListener("touchmove", dragging, { passive: false });
-    slideshow.addEventListener("touchend", dragStop);
-
-    // Sự kiện click vào prev
-    btnSlideshowPrev.addEventListener("click", () => {
-        currentIndex = Math.max(currentIndex - 1, 0);
-        goToSlide(currentIndex, true);
-    });
-
-    // Sự kiện click vào next
-    btnSlideshowNext.addEventListener("click", () => {
-        currentIndex = Math.min(currentIndex + 1, slides.length - 1);
-        goToSlide(currentIndex, true);
-    });
-    
-    // Sự kiện click vào dot
-    dots.forEach(dot => {
-        dot.addEventListener("click", () => {
-            const index = parseInt(dot.getAttribute("data-index"));
-            goToSlide(index, true);
+    // === Ngăn click khi đang kéo ===
+    slideShow.querySelectorAll("a").forEach(a => {
+        a.addEventListener("click", (e) => {
+            if (moved) e.preventDefault();
         });
+        a.addEventListener("dragstart", (e) => e.preventDefault());
     });
 
-    // Căn chỉnh slide ngay khi load
-    goToSlide(currentIndex, false);
+    // === Sự kiện chuột và cảm ứng ===
+    slideShow.addEventListener("mousedown", dragStart);
+    document.addEventListener("mousemove", dragMove);
+    document.addEventListener("mouseup", dragEnd);
+
+    slideShow.addEventListener("touchstart", dragStart);
+    slideShow.addEventListener("touchmove", dragMove);
+    slideShow.addEventListener("touchend", dragEnd);
+
+    // === Căn chỉnh lại khi resize ===
+    let resizeTimeout;
+    window.addEventListener("resize", () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            scrollToIndex(currentIndex);
+        }, 200);
+    });    
+
+    // === Nút điều hướng ===
+    if (btnPrev) {
+        btnPrev.addEventListener("click", () => {
+            scrollToIndex(currentIndex - 1);
+        });
+    }
+
+    if (btnNext) {
+        btnNext.addEventListener("click", () => {
+            scrollToIndex(currentIndex + 1);
+        });
+    }
 });
+
 
 // =============================================================================
 // ==============================    SLIDER OFFER    ===========================
 // =============================================================================
+
+// =============    LEFT/RIGHT    ==========
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".wrapper-slider-offer").forEach(wrapper => {
         const carousel = wrapper.querySelector(".slider-offer");
@@ -249,6 +224,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// ==============    CENTER    =============
 document.addEventListener("DOMContentLoaded", () => {
     const carousel = document.querySelector(".slider-offer-center");
     let cards = Array.from(carousel.querySelectorAll(".card-offer-center"));
