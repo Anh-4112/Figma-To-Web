@@ -254,29 +254,29 @@ document.addEventListener("DOMContentLoaded", () => {
     let cards = Array.from(carousel.querySelectorAll(".card-offer-center"));
     if (!carousel || cards.length === 0) return;
 
-    // === 1. Clone slide đầu và cuối để tạo hiệu ứng vô hạn ===
+    // === Clone slide đầu và cuối để tạo hiệu ứng vô hạn ===
     const cloneHead = cards.slice(0, 2).map(card => card.cloneNode(true));
     const cloneTail = cards.slice(-2).map(card => card.cloneNode(true));
     cloneHead.forEach(clone => carousel.appendChild(clone));
     cloneTail.reverse().forEach(clone => carousel.insertBefore(clone, cards[0]));
     cards = Array.from(carousel.querySelectorAll(".card-offer-center")); // Cập nhật danh sách slide sau khi clone
 
-    // === 2. Thiết lập style cho carousel và slide ===
+    // === Thiết lập style cho carousel và slide ===
     carousel.style.overflowX = "hidden";
     carousel.style.scrollBehavior = "auto";
     carousel.style.scrollSnapType = "none";
     cards.forEach(card => card.style.flexShrink = "0"); // Ngăn co giãn slide
 
-    // === 3. Khai báo các biến điều hướng ===
+    // === Khai báo các biến điều hướng ===
     const realStartIndex = 2; // Sau 2 clone cuối
     let currentIndex = realStartIndex;
 
-    // === 4. Tính vị trí cuộn theo index slide ===
+    // === Tính vị trí cuộn theo index slide ===
     const getScrollPositionForIndex = (index) => {
         return cards[index].offsetLeft - carousel.offsetLeft;
     };
 
-    // === 5. Chờ tất cả ảnh trong carousel load xong mới scroll về vị trí ban đầu ===
+    // === Chờ tất cả ảnh trong carousel load xong mới scroll về vị trí ban đầu ===
     const waitForImagesToLoad = () => {
         const images = carousel.querySelectorAll("img");
         const promises = Array.from(images).map(img => {
@@ -312,7 +312,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // === 6. Scroll đến slide theo index ===
+    // === Scroll đến slide theo index ===
     const scrollToIndex = (index, smooth = true) => {
         carousel.scrollTo({
             left: getScrollPositionForIndex(index),
@@ -320,7 +320,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    // === 7. Tự động chuyển slide ===
+    // === Tự động chuyển slide ===
     let autoSlideInterval = null;
 
     const startAutoSlide = () => {
@@ -349,7 +349,7 @@ document.addEventListener("DOMContentLoaded", () => {
         startAutoSlide();
     };
 
-    // === 8. Kéo tay bằng chuột hoặc cảm ứng ===
+    // === Kéo tay bằng chuột hoặc cảm ứng ===
     let isDragging = false;
     let startX = 0;
     let scrollStart = 0;
@@ -371,12 +371,11 @@ document.addEventListener("DOMContentLoaded", () => {
         carousel.scrollLeft = scrollStart - delta;
     };
 
-    const dragEnd = () => {
+    const dragEnd = (e) => {
         if (!isDragging) return;
         isDragging = false;
     
-        const endX = startX; // vị trí bắt đầu đã lưu từ trước
-        const currentX = event.pageX || (event.changedTouches ? event.changedTouches[0].pageX : 0);
+        const currentX = e.pageX || (e.changedTouches ? e.changedTouches[0].pageX : 0);
         const deltaX = currentX - startX;
     
         const card = cards[currentIndex];
@@ -408,7 +407,7 @@ document.addEventListener("DOMContentLoaded", () => {
         restartAutoSlide();
     };    
 
-    // === 9. Ngăn click khi đang kéo ===
+    // === Ngăn click khi đang kéo ===
     carousel.querySelectorAll("a").forEach(a => {
         a.addEventListener("click", (e) => {
             if (moved) e.preventDefault();
@@ -416,7 +415,7 @@ document.addEventListener("DOMContentLoaded", () => {
         a.addEventListener("dragstart", (e) => e.preventDefault());
     });
 
-    // === 10. Sự kiện chuột và cảm ứng ===
+    // === Sự kiện chuột và cảm ứng ===
     carousel.addEventListener("mousedown", dragStart);
     document.addEventListener("mousemove", dragMove);
     document.addEventListener("mouseup", dragEnd);
@@ -425,16 +424,16 @@ document.addEventListener("DOMContentLoaded", () => {
     carousel.addEventListener("touchmove", dragMove);
     carousel.addEventListener("touchend", dragEnd);
 
-    // === 11. Tạm dừng khi hover vào, chạy lại khi rời chuột ===
+    // === Tạm dừng khi hover vào, chạy lại khi rời chuột ===
     carousel.addEventListener("mouseenter", stopAutoSlide);
     carousel.addEventListener("mouseleave", restartAutoSlide);
 
-    // === 12. Tự canh chỉnh lại vị trí khi resize ===
+    // === Tự chỉnh lại vị trí khi resize ===
     window.addEventListener("resize", () => {
         scrollToIndex(currentIndex, false);
     });
 
-    // === 13. Đảm bảo khởi tạo scroll đúng vị trí ban đầu ===
+    // === Khởi tạo scroll đúng vị trí ban đầu ===
     requestAnimationFrame(() => {
         const target = cards[realStartIndex];
         if (target) {
