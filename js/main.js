@@ -426,6 +426,9 @@ document.addEventListener("DOMContentLoaded", () => {
     carousel.addEventListener("touchmove", dragMove);
     carousel.addEventListener("touchend", dragEnd);
 
+    carousel.addEventListener("mouseenter", stopAutoSlide);
+    carousel.addEventListener("mouseleave", startAutoSlide);
+
     // === Resize ===
     window.addEventListener("resize", () => {
         scrollToIndex(currentIndex, false);
